@@ -20,24 +20,31 @@
             </div>
           </nav>
     </div>
-    <div class="loginEmail">
+    <div class="login" id="loginEmail">
         <form>
             <p id="loginTitle">Login</p>
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="emailInput" />
-            <input type="submit" value="Submit" />
+            <div id="loginEmail">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="emailInput" />    
+            </div>
+            <div id="loginCode">
+                <label for="code">Code:</label>
+                <input type="text" name="code" id="codeInput" />
+                <button id="submitButton">Submit</button>
+            </div>
             <p id="loginFooter">Don't have an account? <a href="">Sign up</a> today!</p>
         </form>
     </div>
-    <div class="loginCode">
+<!--
+    <div class="loginCode" id="loginCode">
         <form>
             <p id="loginTitle">Login</p>
-            <label for="code">Code:</label>
-            <input type="text" name="code" id="codeInput" />
-            <input type="submit" value="Submit" />
+            
+            <button id="codeButton">Submit</button>
             <p id="loginFooter">Didn't get a code? <a href="">Click here</a> to resend.</p>
         </form>
     </div>
+-->
 </body>
 <footer class="pageFooter">
     <p>© 2024 StudyHub Team Hackathon Project</p>
