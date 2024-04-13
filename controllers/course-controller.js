@@ -1,4 +1,4 @@
-const User = require(`../model/Course`);
+const Course = require(`../model/Course`);
 const {ObjectId} = require(`mongoose`);
 
 const courseController = {
@@ -17,9 +17,20 @@ const courseController = {
     },
     getAllCourses(req, res) {
         Course.find({})
+        .select("-__v")
         .then((courses) => res.status(200).json(courses))
         .catch((err) => {
             console.error("Something went wrong when trying to retrieve all the courses from the database.");
+            res.status(500).json(err);
+        });
+    },
+    getCourseByCN(req,res) {
+        const courseCN = req.params.CN
+        Course.find({courseCN: courseCN})
+        .select("-__v")
+        .then((courses) => res.status(200).json(courses))
+        .catch((err) => {
+            console.error(`Something went wrong when trying to retrieve course with CN ${courseCN}.`);
             res.status(500).json(err);
         });
     }

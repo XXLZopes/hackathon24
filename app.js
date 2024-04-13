@@ -31,7 +31,7 @@ const courseRouter = require('./routes/course')
 
 app.use(`/user`, userRouter);
 app.use(`/verify`, verifyRouter);
-app.use('course',courseRouter);
+app.use('/course',courseRouter);
 
 mongoose
     .connect(
