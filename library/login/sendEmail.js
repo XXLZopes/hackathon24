@@ -22,7 +22,7 @@ async function sendEmail(email) {
       return { emailSent: true };
     })
     .catch((error) => {
-      console.log("There was an error!", error);
+      console.error("There was an error!", error);
       alert("Failed to send code. Please try again.");
       return { emailSent: false };
     });
