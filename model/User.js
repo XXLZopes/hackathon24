@@ -18,6 +18,10 @@ const UserSchema = new Schema({
         type: [String],
         default: []
     }, 
+    tutorScore: {
+        type: Number,
+        default: null
+    }
 });
 
 const User = model('User', UserSchema);
