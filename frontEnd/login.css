@@ -82,11 +82,6 @@ div#loginEmail
     display: default;
 }
 
-div#loginCode
-{
-    display: none;
-}
-
 .pageFooter
 {
     background-color: #FFC72C; 

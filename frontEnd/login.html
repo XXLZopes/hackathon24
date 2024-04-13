@@ -18,23 +18,17 @@
       
               <h1>StudyHub</h1>
             </div>
-          </nav>
-    </div>
-    <div class="login" id="loginEmail">
-        <form>
+        </nav>
+        </div>
+        <div class="login" id="loginEmail">
             <p id="loginTitle">Login</p>
             <div id="loginEmail">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="emailInput" />    
+                <input type="email" name="email" id="emailInput" required="required" />
             </div>
-            <div id="loginCode">
-                <label for="code">Code:</label>
-                <input type="text" name="code" id="codeInput" />
-                <button id="submitButton">Submit</button>
-            </div>
+            <button id="submitButton" onclick="displaySubmit()">Submit</button>
             <p id="loginFooter">Don't have an account? <a href="">Sign up</a> today!</p>
-        </form>
-    </div>
+        </div>
 <!--
     <div class="loginCode" id="loginCode">
         <form>
@@ -46,6 +40,7 @@
     </div>
 -->
 </body>
+<script src="./js/displaySubmit.js"></script>
 <footer class="pageFooter">
     <p>© 2024 StudyHub Team Hackathon Project</p>
 </footer>
