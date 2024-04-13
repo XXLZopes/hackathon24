@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css"
           href="landing.css"/>
 
@@ -14,30 +12,29 @@
 <body>
 
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="black-text brand-logo center">StudyHub</a>
-          <ul id="nav-mobile" class="black-text left hide-on-med-and-down">
-            <li><a class="black-text" href="#">Home</a></li>
-            <li><a class="black-text" href="#">About Us</a></li>
-            <li><a class="black-text" href="#">Login</a></li>
-          </ul>
-        </div>
-      </nav>
-            
+      <div class="navWrapper">
+        <ul id="navList">
+          <li><a href="landing.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+
+        <h1>StudyHub</h1>
+      </div>
+    </nav>
+        
     
     <div class="imageButtonRow">
     <img src="images/student.png" alt="student" id="studentImage"/>
-    <button class="landingButton" id="studentButton">I am a <br/> Student...</button>
-    <button class="landingButton positionNeg" id="tutorButton">I am a <br/>Tutor...</button>
+    <button class="landingButton" id="studentButton" onclick="window.location.href ='login.html';">I am a <br/> Student...</button>
+    <button class="landingButton positionNeg" id="tutorButton" onclick="window.location.href ='login.html';">I am a <br/> Tutor...</button>
     <img src="images/tutor.png" alt="student" class="positionNeg" id="tutorImage"/>
     </div>
 
 
-    <footer class="page-footer">
-          <div class="black-text container center">
-          © 2024 StudyHub Team Hackathon Project
-          </div>
-      </footer>
+    <footer class="pageFooter">
+          <p>© 2024 StudyHub Team Hackathon Project</p>
+    </footer>
 
 </body>
 </html>
