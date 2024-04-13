@@ -1,11 +1,33 @@
 // wvCCFbpeOsvk6sPT
 const mongoose = require(`mongoose`);
 const express = require(`express`);
-const app = express();
-app.use(express.json());
-const port = 3500;
+const session = require(`express-session`);
+const cors = require(`cors`);
 
+const app = express();
+
+
+const port = 3500;
 const uri = `mongodb+srv://root:wvCCFbpeOsvk6sPT@cluster0.vhgzsme.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+
+const corsData = {
+    origin: `http://127.0.0.1:5500`,
+    credentials: true
+};
+
+app.use(express.json());
+app.use(cors(corsData));
+app.set(`trust proxy`, 1);
+app.use(session({
+    secret: `OooSoSecret123`,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
+
+const userRouter = require(`./routes/user`);
+
+app.use(`/user`, userRouter);
 
 mongoose
     .connect(
