@@ -99,6 +99,12 @@ div#loginEmail
     padding-bottom: 1vh;
 }
 
+#codeInput
+{
+    margin: auto;
+    margin-left: 1vh;
+}
+
 .pageFooter
 {
     background-color: #FFC72C; 
