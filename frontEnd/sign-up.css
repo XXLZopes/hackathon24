@@ -1,0 +1,40 @@
+div.signUp
+{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5em solid #F2A900;
+    border-radius: 1em;
+    background-color: #FFC72C;
+    width: 35em;
+    padding-bottom: 0.5em;
+    margin: 25vh auto 25vh auto;
+    font-family: Helvetica, sans-serif;
+}
+
+#signUpTitle
+{
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font: bold 1.5em helvetica, sans-serif;
+}
+
+div.signUp div
+{
+    margin: auto;
+    margin-bottom: 1vh;
+}
+
+#submitButton
+{
+    margin: auto;
+}
+
+#signUpFooter
+{
+    text-align: center;
+}

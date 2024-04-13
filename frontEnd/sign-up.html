@@ -21,6 +21,32 @@
             </div>
           </nav>
     </div>
+
+    <div class="signUp" id="divSignUp">
+        <p id="signUpTitle">New Account</p>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="nameInput" required="required" />
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="emailInput" required="required" />
+        </div>
+        <div>
+            <label for="major">Major:</label>
+            <input type="text" name="major" id="majorInput" required="required" />
+        </div>
+        <div>
+            <label for="courses">Courses:</label>
+            <input type="text" name="courses" id="coursesInput" required="required" />
+        </div>
+        <button id="submitButton" onclick="displaySubmit()">Submit</button>
+        <p id="signUpFooter">Have an account? <a href="">Log in</a> instead!</p>
+    </div>
+
+    <div class="coursesModal" id="divCoursesModal">
+
+    </div>
 </body>
 <footer class="pageFooter">
     <p>© 2024 StudyHub Team Hackathon Project</p>
