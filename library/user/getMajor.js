@@ -1,4 +1,4 @@
-async function getMajor() {
+async function getMajor(userId) {
     const apiUrl = getApiEndPoint()
 
     await fetch(apiUrl)
