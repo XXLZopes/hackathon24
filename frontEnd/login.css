@@ -1,0 +1,59 @@
+body
+{
+    background-color: #98B8AD;
+    overflow: none;
+}
+
+.page-footer
+{
+    background-color: #FFC72C; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav-wrapper
+{
+    background-color: #FFC72C; 
+}
+
+div.loginEmail
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border: 0.5em solid #F2A900;
+    border-radius: 1em;
+    background-color: #FFC72C;
+    margin: 25vh;
+}
+
+#loginTitle
+{
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label
+{
+    padding: 1em;
+    color: black;
+    font-size: 1em;
+}
+
+
+
+div.loginCode
+{
+    display: none;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border: 0.5em solid #F2A900;
+    border-radius: 1em;
+    background-color: #FFC72C;
+    margin: 25vh;
+}

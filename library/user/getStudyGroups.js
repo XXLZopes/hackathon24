@@ -1,4 +1,4 @@
-async function getUserName(userId) {
+async function getStudyGroups(userId) {
     const apiUrl = getApiEndPoint()
 
     await fetch(apiUrl)

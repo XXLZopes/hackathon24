@@ -1,4 +1,4 @@
-async function getUserName(userId) {
+async function getSessionTime(sessionId) {
     const apiUrl = getApiEndPoint()
 
     await fetch(apiUrl)

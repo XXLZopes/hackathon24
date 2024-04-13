@@ -1,4 +1,4 @@
-async function getUserName(userId) {
+async function getCoursesOnDay(userId, weekday) {
     const apiUrl = getApiEndPoint()
 
     await fetch(apiUrl)
@@ -7,4 +7,3 @@ async function getUserName(userId) {
         return response.json()
     })
 }
-
