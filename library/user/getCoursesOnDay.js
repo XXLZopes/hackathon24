@@ -1,5 +1,5 @@
 async function getCoursesOnDay(userId, weekday) {
-    const apiUrl = getApiEndPoint()
+    const apiUrl = "http://localhost:3500"
 
     await fetch(apiUrl)
     .then(response => {
