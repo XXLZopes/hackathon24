@@ -50,6 +50,16 @@ body
     
 }
 
+.navWrapper h3
+{
+    position: absolute; 
+    top: 20%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+}
+
 .pageFooter
 {
     background-color: #FFC72C; 

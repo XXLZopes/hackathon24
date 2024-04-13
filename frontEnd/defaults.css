@@ -1,17 +1,13 @@
-body
+*
 {
-    background-color: #98B8AD;
-    overflow: none;
+    box-sizing: border-box; 
 }
 
-.page-footer
+body
 {
-    background-color: #FFC72C; 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
+    background-color: #98B8AD; 
+    overflow: scroll; 
+} 
 
 .navWrapper
 {
@@ -33,7 +29,14 @@ body
     margin: 0;
     padding: 0;
     position: absolute; 
-    top: 30%; 
+    top: 30%;
+    
+}
+
+.navWrapper ul a
+{
+    text-decoration: none; 
+    color: black; 
 }
 
 .navWrapper h1
@@ -45,4 +48,24 @@ body
     width: 40px;
     height: 40px;
     
+}
+
+.navWrapper h3
+{
+    position: absolute; 
+    top: 20%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+}
+
+.pageFooter
+{
+    background-color: #FFC72C; 
+    text-align: center; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

@@ -65,11 +65,11 @@ body
 
 .imageButtonRow
 {
+    max-width: 100%;
     width: 90%; 
     margin-left: auto; 
     margin-right: auto; 
     margin-top: 10em; 
-    
     display: flex;
     flex-direction: row; 
     justify-content: space-between; 
@@ -85,7 +85,7 @@ body
     border-radius: 1em; 
     font-size: 2em; 
     padding: 2em; 
-    width: 10em; 
+    width: 30%; 
     height: 50%; 
 }
 
