@@ -2,3 +2,44 @@ body
 {
     background-color: #98B8AD; 
 }
+
+.nav-wrapper
+{
+    background-color: #FFC72C; 
+}
+
+#studentImage
+{
+    width: 25%; 
+    height: 25%; 
+}
+
+#tutorImage
+{
+    width: 25%; 
+    height: 25%; 
+}
+
+.imageButtonRow
+{
+    width: 90%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2em; 
+}
+.landingButton
+{ 
+    background-color: #FFC72C; 
+    color: #000000; 
+    border: 0.5em solid #F2A900; 
+    border-radius: 1em; 
+    font-size: 2em; 
+    padding: 2em; 
+    width: 50%; 
+    
+
+}
