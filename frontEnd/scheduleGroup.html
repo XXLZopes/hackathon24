@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"
+          href="defaults.css"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="scheduleGroup.css"/>
+
+    <title>StudyHub Group Scheduling</title>
+</head>
+<body>
+
+    <nav>
+      <div class="navWrapper">
+        <ul id="navList">
+          <li><a href="landing.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+        <h1>StudyHub</h1>
+
+        <h3 id="welcomeName">Welcome, name</h3>
+      </div>
+    </nav>
+
+    
+    <h2 id="namesQuestion">Who is in your group?</h1>
+    
+    <div class="nameInfo">
+        <label for="groupName">Please enter a username:</label>
+        <input type="text" name="name" id="groupName" placeholder="ex: lay6" />
+        <p>Group Members:</p>
+        <ul id="groupMemberNameList">
+
+        </ul>
+    </div>
+
+    <h2 id="timeQuestion">How long is your meeting?</h1>
+    <div class="timeInfo">
+     
+        <input type="radio" name="meetingLength" id="15" />
+        <label for="15">15 minutes</label>
+        
+        <input type="radio" name="meetingLength" id="30" />
+        <label for="30">30 minutes</label>
+        
+        <input type="radio" name="meetingLength" id="1" />
+        <label for="1">1 hour</label>
+        
+        <input type="radio" name="meetingLength" id="130" />
+        <label for="130">1.5 hours</label>
+        
+        <input type="radio" name="meetingLength" id="2" />
+        <label for="2">2 hours</label>
+    </div>
+
+
+    <div id="findTimeButtonDiv"><button id="findTimeButton">Find Times</button></div>
+
+    <footer class="pageFooter">
+        <p>© 2024 StudyHub Team Hackathon Project</p>
+  </footer>
+
+</body>
+</html>
