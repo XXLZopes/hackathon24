@@ -1,6 +1,7 @@
 body
 {
-    background-color: #98B8AD; 
+    background-color: #98B8AD;
+    overflow: none;
 }
 
 .page-footer
@@ -25,8 +26,7 @@ div.loginEmail
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    width: 25em;
-    margin: 25% auto 25% auto;
+    margin: 25vh;
 }
 
 #loginTitle
@@ -55,7 +55,5 @@ div.loginCode
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    width: 25em;
-    margin: 25% auto 25% auto;
-    border: 0.5em solid #F2A900;
+    margin: 25vh;
 }
