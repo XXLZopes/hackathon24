@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="index.js"></script>
+</head>
 <body>
-<h1>TEMP LOGIN</h1>
-<form method="POST">
-    <legend>Login:</legend>
-    <input type="email" placeholder="Email" required="required"/>
-    <input type="text" placeholder="Code" required="required"/>
-    <input type="submit"/>
-</form>
+    <h1>TEMP LOGIN</h1>
+    <form>
+        <legend>Login:</legend>
+        <input id="email" type="email" placeholder="Email" required="required"/>
+        <input id='code' type="text" placeholder="Code" required="required"/>
+    </form>
+    <button id="sendCode">Send Code</button>
+    <button id="submit">Submit</button>
 </body>
 </html>

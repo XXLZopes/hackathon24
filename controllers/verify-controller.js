@@ -4,6 +4,7 @@ const session = require(`express-session`);
 const adminEmail = `aidan1meyer1@gmail.com`;
 const adminEmailPW = `kgvn bhwr vpew baay `;
 
+// let verificationCodes = {'aidan1meyer1@gmail.com': '000000'};
 let verificationCodes = {};
 
 function setCodeLifetime(email) {
@@ -47,24 +48,26 @@ const sendVerificationCode = async (req, res) => {
         res.status(500).json({ message: `Failed to send verification code.` });
     }
 };
-
 const verifyCode = (req, res) => {
     const { email, code } = req.body;
 
-    if (!email || code) {
-        return res.status(400).json( { message: `Both email and code are required!` });
+    if (!email || !code) {
+        return res.status(400).json({ message: 'Both email and code are required.' });
     }
+
     if (verificationCodes[email] === code) {
         delete verificationCodes[email];
 
-        req.sessions.userEmail = email;
+        req.session.userEmail = email;
+
         res.json({
-            message: `Email verification complete.`,
-            verified: true,
+            message: 'Email verified successfully.',
+            verified: true
         });
+
     } else {
         res.status(400).json({
-            message: `Invalid verifiction code.`,
+            message: 'Invalid verification code.',
             verified: false
         });
     }

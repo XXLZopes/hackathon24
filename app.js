@@ -26,8 +26,10 @@ app.use(session({
 }));
 
 const userRouter = require(`./routes/user`);
+const verifyRouter = require(`./routes/verify`);
 
 app.use(`/user`, userRouter);
+app.use(`/verify`, verifyRouter);
 
 mongoose
     .connect(

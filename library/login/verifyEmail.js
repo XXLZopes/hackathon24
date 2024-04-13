@@ -1,7 +1,6 @@
-const { error } = require("console");
-
 async function verifyEmail(email, code) {
 
+    console.log(email, code);
     if(!email || !code) {
         alert("No Email or Code")
         return false;
@@ -17,6 +16,9 @@ async function verifyEmail(email, code) {
     const isVerified = await fetch("/verify/verify-code",requestData)
     .then(response => {
         return response.json().verified
+    }).catch(error => {
+        console.error('There was an error', error);
+        return false;
     })
 
     if(isVerified)
