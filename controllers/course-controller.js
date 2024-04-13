@@ -33,6 +33,25 @@ const courseController = {
             console.error(`Something went wrong when trying to retrieve course with CN ${courseCN}.`);
             res.status(500).json(err);
         });
+    },
+    deleteCourseByCN(req, res) {
+        const courseCN = req.params.CN;
+        Course.findOneAndDelete({ courseCN: courseCN })
+        .then((deletedPlayer) => {
+            if (!deletedPlayer) {
+                return res.status(404).json({ message: `No player with the UUID ${playerUUID} found.` });
+            }
+            return res.status(200).json({ 
+                message: `Player with UUID ${playerUUID} and name ${deletedPlayer.username} sucessfully deleted.`,
+                player: deletedPlayer,
+            });
+        })
+        .catch((err) => {
+            console.log(
+                `Something went wrong when attempting to delete the Player with the UUID ${playerUUID}.`
+            );
+            return res.status(500).json(err);
+        });
     }
 }
 
