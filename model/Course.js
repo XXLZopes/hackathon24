@@ -10,7 +10,7 @@ const CourseSchema = new Schema({
         required: true
     },
     
-    name: {
+    className: {
         type: String,
         required: true
     },
