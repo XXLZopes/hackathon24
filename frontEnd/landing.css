@@ -1,6 +1,8 @@
-*
+* 
 {
     box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
 }
 
 body
@@ -12,11 +14,11 @@ body
 {
     width: 100%;
     height: 4em; 
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     background-color: #FFC72C; 
-    
+    max-width: 100%; 
 }
 
 .navWrapper ul
@@ -50,14 +52,14 @@ body
 
 #studentImage
 {
-    width: 25%; 
-    height: 25%; 
+    width: 50%; 
+    height: 50%; 
 }
 
 #tutorImage
 {
-    width: 25%; 
-    height: 25%; 
+    width: 50%; 
+    height: 50%; 
     position: relative; 
     left: -60px; 
     
@@ -65,16 +67,40 @@ body
 
 .imageButtonRow
 {
-    max-width: 100%;
-    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    /* margin-top: 5em; 
+    width: 50%; 
     margin-left: auto; 
     margin-right: auto; 
-    margin-top: 10em; 
     display: flex;
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
-    gap: 2em; 
+    flex-direction: column; 
+    justify-content: center;
+    gap: 2em;  */
+}
+.imageButtonRow div {
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.imageButtonRow div {
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.studentDiv
+{
+    display: flex; 
+    align-content: center; 
+    justify-content: center; 
+}
+
+.tutorDiv
+{
+    display: flex; 
+    align-content: center; 
+    justify-content: center; 
 }
 
 .landingButton
@@ -83,10 +109,10 @@ body
     color: #000000; 
     border: 0.5em solid #F2A900; 
     border-radius: 1em; 
-    font-size: 2em; 
+    /* font-size: 2em;  */
     padding: 2em; 
-    width: 30%; 
-    height: 50%; 
+    width: 50%;
+    /* height: 50%; */
 }
 
 #tutorButton
