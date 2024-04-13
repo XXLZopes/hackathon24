@@ -49,7 +49,6 @@ body
     
 }
 
-
 .pageFooter
 {
     background-color: #FFC72C; 
@@ -59,3 +58,44 @@ body
     bottom: 0;
     width: 100%;
 }
+
+.dayCardRow
+{
+    display: flex; 
+    justify-content: center; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 1em; 
+    margin-top: 4em; 
+}
+
+.dayCard
+{
+    background-color: #F5F3E7; 
+    border-radius: 1em; 
+    width: 10em; 
+}
+
+.dayHeader
+{
+    background-color: #FFC72C; 
+    padding: 0.5em; 
+    border-top-left-radius: 1em; 
+    border-top-right-radius: 1em; 
+    text-align: center; 
+}
+
+#weekHeader
+{
+    margin-top: 4em; 
+    background-color: #004C46; 
+    width: 70%; 
+    color: #F5F3E7; 
+    border-radius: 3em;  
+    padding-top: 0.1em; 
+    padding-bottom: 0.1em; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center; 
+}
+
