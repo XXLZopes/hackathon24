@@ -4,14 +4,17 @@ let email;
 
 function displaySubmit() {
   email = document.querySelector("#emailInput").value;
-  document.querySelector("#loginEmail").innerHTML =
-    '<label for="code">Code:</label> <input type="text" name="code" id="codeInput"/> <button id="submit" onclick="verifyEmail()">Submit</button>';
-  const submitEl = document.querySelector("#submit");
+  if (!email) {
+    alert("Please enter an email.");
+    return;
+  } else {
+    document.querySelector("#loginEmail").innerHTML =
+      '<label for="code">Code:</label> <input type="text" name="code" id="codeInput"/> <button id="submit" onclick="verifyEmail()">Submit</button>';
+  }
 }
 
 // SEND CODE LOGIC
 async function sendEmail() {
-
   const requestData = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -57,8 +60,8 @@ async function verifyEmail() {
   const isVerified = await fetch(url + "/verify/verify-code/", requestData)
     .then((response) => {
       // console.log(response)
-    console.log("Email: " + email);
-    console.log("Code: " + code);
+      console.log("Email: " + email);
+      console.log("Code: " + code);
       return response.json();
     })
     .then((data) => {
@@ -78,7 +81,7 @@ async function verifyEmail() {
       })
       .then((data) => {
         console.log("data.verified: ", data);
-        //window.location.href = "../homepage.html";
+        window.location.href = "../homepage.html";
         return data.verified;
       })
       .catch((error) => {
@@ -91,5 +94,7 @@ async function verifyEmail() {
 const sendCodeEl = document.querySelector("#sendCode");
 
 sendCodeEl.addEventListener("click", () => {
-  sendEmail();
+  if (email) {
+    sendEmail();
+  }
 });
