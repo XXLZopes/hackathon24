@@ -25,7 +25,8 @@ div.loginEmail
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    margin: 25% 15% 25% 15%;
+    width: 25em;
+    margin: 25% auto 25% auto;
 }
 
 #loginTitle
@@ -54,5 +55,7 @@ div.loginCode
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    margin: 25% 15% 25% 15%;border: 0.5em solid #F2A900;
+    width: 25em;
+    margin: 25% auto 25% auto;
+    border: 0.5em solid #F2A900;
 }
