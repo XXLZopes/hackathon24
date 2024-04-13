@@ -3,7 +3,7 @@ async function getUserName() {
 
     await fetch(apiUrl)
     .then(response => {
-        console.log(response.json());
+        console.log(response.json())
     })
 }
 
