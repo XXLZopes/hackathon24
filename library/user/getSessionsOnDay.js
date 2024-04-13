@@ -1,4 +1,4 @@
-async function getStudyGroups(userId) {
+async function getSessionsOnDay(userId, weekday) {
     const apiUrl = "http://localhost:3500"
 
     await fetch(apiUrl)
@@ -7,4 +7,3 @@ async function getStudyGroups(userId) {
         return response.json()
     })
 }
-
