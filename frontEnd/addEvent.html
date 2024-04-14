@@ -9,22 +9,25 @@
           href="defaults.css"/>
 
     <link rel="stylesheet" type="text/css"
-          href="homepage.css"/>
+          href="addEvent.css"/>
 
-    <title>StudyHub Home</title>
+    <title>StudyHub Tutor Home</title>
 </head>
 <body>
 
     <nav>
       <div class="navWrapper">
         <ul id="navList">
-          <li><a href="landing.html">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Profile</a></li>
+          <li><a href="studentHomepage.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
         </ul>
         <h1>StudyHub</h1>
 
-        <h3 id="welcomeName">Welcome, name</h3>
+        <h3 id="welcomeHeader">Welcome, <span id="welcomeUserName"></span> <br/>
+            <a href="studentHomepage.html">Student View</a>  |
+            <a href="tutorHomepage.html">Tutor View </a>
+        </h3>
       </div>
     </nav>
 
@@ -38,6 +41,7 @@
       <p>
         <ul id="monScheduleList"></ul>
       </p>
+      <button class="addEventButton">Add Event</button>
     </div>
 
     <div class="dayCard">
@@ -45,6 +49,7 @@
       <p>
         <ul id="tueScheduleList"></ul>
       </p>
+      <button class="addEventButton">Add Event</button>
     </div>
 
     <div class="dayCard">
@@ -52,6 +57,7 @@
       <p>
         <ul id="wedScheduleList"></ul>
       </p>
+      <button class="addEventButton">Add Event</button>
     </div>
 
     <div class="dayCard">
@@ -59,6 +65,7 @@
       <p>
         <ul id="thurScheduleList"></ul>
       </p>
+      <button class="addEventButton">Add Event</button>
     </div>
 
     <div class="dayCard">
@@ -66,6 +73,7 @@
       <p>
         <ul id="friScheduleList"></ul>
       </p>
+      <button class="addEventButton">Add Event</button>
     </div>
 
     <div class="dayCard">
@@ -73,6 +81,7 @@
       <p>
         <ul id="satScheduleList"></ul>
       </p>
+      <button class="addEventButton">Add Event</button>
     </div>
 
     <div class="dayCard">
@@ -80,15 +89,16 @@
       <p>
         <ul id="sunScheduleList"></ul>
       </p>
+      <button class="addEventButton">Add Event</button>
     </div>
 </div>
 
 
 <div class="homepageButtonRow">
 
-  <button class="homepageButton" id="scheduleTutorButton">Schedule <br/>Tutor <br/>Session</button>
-  <button class="homepageButton" id="scheduleGroupButton">Schedule <br/>Group<br/> Session</button>
-  <button class="homepageButton" id="addEventButton">Add <br/>Event</button>
+  <!--<button class="homepageButton" id="scheduleTutorButton" onclick="window.location.href ='scheduleTutor.html';">Schedule <br/>Tutor <br/>Session</button>
+  <button class="homepageButton" id="scheduleGroupButton" onclick="window.location.href ='scheduleGroup.html';">Schedule <br/>Group<br/> Session</button>
+  <button class="homepageButton" id="addEventButton">Add <br/>Event</button>-->
 
 </div>
 

@@ -18,7 +18,7 @@
     <nav>
       <div class="navWrapper">
         <ul id="navList">
-          <li><a href="landing.html">Home</a></li>
+          <li><a href="studentHomepage.html">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Profile</a></li>
         </ul>
@@ -31,19 +31,15 @@
     
     <h1 id="classQuestion">What courses would you like to be tutored in today?</h1>
 
-    <div class="coursesDiv">
-        <!--dynamic elements (initially their courses, then have an add course button that adds a new course)
-        
-        ex: <p class="courseCard"> CS 100 </p>
-            <button class="addCourseButton"> Add Course </button>
-        -->
+    <div id="coursesDiv">
+      
     </div>
 
-    <div id="findTutorButtonDiv"><button id="findTutorButton">Find Tutor</button></div>
+    <div id="findTutorButtonDiv"><button id="findTutorButton" onclick="window.location.href ='tutorSessionResults.html';">Find Tutor</button></div>
 
     <footer class="pageFooter">
         <p>© 2024 StudyHub Team Hackathon Project</p>
   </footer>
-
+  <script src="js/populateClasses.js"></script>
 </body>
 </html>

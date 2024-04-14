@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css"
-          href="landing.css"/>
+  <link rel="stylesheet" type="text/css" href="landing.css" />
 
-    <title>StudyHub Landing</title>
+  <title>StudyHub Landing</title>
 </head>
+
 <body>
 
-    <nav>
-      <div class="navWrapper">
-        <ul id="navList">
-          <li><a href="landing.html">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
+  <nav>
+    <div class="navWrapper">
+      <ul id="navList">
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
 
-        <h1>StudyHub</h1>
-      </div>
-    </nav>
-        
-    
-    <div class="imageButtonRow">
-    <img src="images/student.png" alt="student" id="studentImage"/>
-    <button class="landingButton" id="studentButton" onclick="window.location.href ='login.html';">I am a <br/> Student...</button>
-    <button class="landingButton positionNeg" id="tutorButton" onclick="window.location.href ='login.html';">I am a <br/> Tutor...</button>
-    <img src="images/tutor.png" alt="student" class="positionNeg" id="tutorImage"/>
+      <h1>StudyHub</h1>
     </div>
+  </nav>
 
 
-    <footer class="pageFooter">
-          <p>© 2024 StudyHub Team Hackathon Project</p>
-    </footer>
+  <div class="imageButtonRow">
+    <div class="studentDiv">
+      <img src="images/student.png" alt="student" id="studentImage" />
+      <button class="landingButton" id="studentButton" onclick="window.location.href ='login.html';">I am a <br />
+        Student...</button>
+    </div>
+    <div class="tutorDiv"><button class="landingButton positionNeg" id="tutorButton"
+        onclick="window.location.href ='login.html';">I am a <br /> Tutor...</button>
+      <img src="images/tutor.png" alt="student" class="positionNeg" id="tutorImage" />
+    </div>
+  </div>
+
+
+  <footer class="pageFooter">
+    <p>© 2024 StudyHub Team Hackathon Project</p>
+  </footer>
 
 </body>
+
 </html>

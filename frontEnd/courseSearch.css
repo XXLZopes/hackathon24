@@ -1,0 +1,7 @@
+#courseList {
+    display: block;
+}
+
+#courseList .course {
+    list-style-type: none;
+}

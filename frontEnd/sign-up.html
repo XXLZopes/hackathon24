@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="defaults.css" type="text/css" rel="stylesheet" />
     <link href="sign-up.css" type="text/css" rel="stylesheet" />
-    <title>Login | StudyHub</title>
+    <title>Sign Up | StudyHub</title>
 </head>
-<body>
+<body onload="displayCourses()">
     <div class="header">
         <nav>
             <div class="navWrapper">
@@ -40,15 +40,27 @@
             <label for="courses">Courses:</label>
             <input type="text" name="courses" id="coursesInput" required="required" />
         </div>
-        <button id="submitButton" onclick="displaySubmit()">Submit</button>
+        <button id="submitButton" onclick="displaySubmit()">Create Account</button>
         <p id="signUpFooter">Have an account? <a href="">Log in</a> instead!</p>
     </div>
 
     <div class="coursesModal" id="divCoursesModal">
-
+        <p>Select Your Course(s)</p>
+        <input type="text" id="searchInput" placeholder="Search"/>
+        <!-- For each course, make a modalContent div -->
+        <div class="modalContent">
+            <button>CS 111</button>
+        </div>
+        <div class="modalContent">
+            <button>CS 112</button>
+        </div>
     </div>
 </body>
+
 <footer class="pageFooter">
     <p>© 2024 StudyHub Team Hackathon Project</p>
 </footer>
+
+<script src="./js/courseSearch.js"></script>
+
 </html>
