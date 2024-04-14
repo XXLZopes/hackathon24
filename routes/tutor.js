@@ -7,7 +7,8 @@ const {
     getTutorSessionByTutor,
     deleteTutorSessionBySessionID,
     updateTutorSessionBySessionID,
-    getTutorSessionById
+    getTutorSessionById,
+    getTutorSessionByCourseName
 } = require(`../controllers/tutor-controller`);
 
 router.route(`/`)
@@ -23,5 +24,8 @@ router.route(`/tutorID/:tutorID`)
 router.route(`/id/:sessionID`)
     .delete(deleteTutorSessionBySessionID)
     .put(updateTutorSessionBySessionID)
+
+router.route('/courseName/:courseName')
+    .get(getTutorSessionByCourseName)
 
 module.exports = router;

@@ -40,6 +40,18 @@ async function displayCourses() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  let divWrapperEl = document.getElementById("divCoursesModal");
+  let searchEl = document.getElementById("searchInput");
+  let courses;
+  
+  divWrapperEl.addEventListener('click', function(event) {
+      if (event.target.tagName === 'BUTTON' && event.target.parentElement.classList.contains('modalContent')) {
+          var content = event.target.textContent.trim();
+          console.log('Course selected:', content); 
+      }
+  })});
+
 function startSearchListener() {
   searchEl.addEventListener("keyup", (event) => {
     const { value } = event.target;
