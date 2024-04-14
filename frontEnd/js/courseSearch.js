@@ -7,7 +7,28 @@ let courses;
 let course;
 let divWrapperArray = [];
 
+
+
 async function displayCourses() {
+  let userCourses = [];
+
+  try {
+    const response = await fetch(`http://localhost:3500/user/courses`, {
+        method: 'GET',
+        credentials: 'include',
+    });
+    const data = await response.json();
+    if (response.ok) {
+        console.log('User Courses:', data);
+        userCourses = data.courses;
+    } else {
+        throw new Error(`Server responded with status ${response.status}: ${data.message}`);
+    }
+  } catch (error) {
+    console.error('Error fetching course data:', error);
+    return;
+  }
+
   // This needs to be an array from the list of all courses
   await fetch("http://localhost:3500/course/courseName", {
     credentials: "include",
@@ -34,6 +55,12 @@ async function displayCourses() {
             element = element[0] + " " + element[1];
         }
         courseButton.innerHTML = element;
+
+        if (userCourses.includes(courseButton.getAttribute("data-course-name"))) {
+          toggleButtonHighlight(courseButton);
+          updateSelectedCourses(courseButton.getAttribute("data-course-name"));
+        }
+
       });
     })
     .then((_) => {
@@ -44,31 +71,6 @@ async function displayCourses() {
       startSearchListener();
     });
 
-    
-
-    for(className of populateButtons()) {
-      //todo 
-    };
-}
-
-async function populateButtons() {
-  let results = [];
-  try {
-    const response = await fetch(`http://localhost:3500/user/courses`, {
-        method: 'GET',
-        credentials: 'include',
-    });
-    const data = await response.json();
-    if (response.ok) {
-        console.log('User Course:', data);
-        results.push(data);
-    } else {
-        throw new Error(`Server responded with status ${response.status}: ${data.message}`);
-    }
-} catch (error) {
-    console.error('Error fetching course data:', error);
-    results.push(null);  
-}
 }
 
 submitCoursesButton.addEventListener('click', postSelectedCourses);
