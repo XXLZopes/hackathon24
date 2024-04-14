@@ -1,6 +1,5 @@
-let coursesToRequest = [];
 
-async function displayCourses() {
+async function makeCourseHeaders() {
     const requestData = {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -18,8 +17,7 @@ async function displayCourses() {
     const coursesDivEl = document.querySelector(`#coursesDiv`);
     user.classList.forEach((course) => {
         console.log("course: ", course)
-        let courseCardEl = document.createElement(`button`);
-        courseCardEl.setAttribute('onclick', 'addToArray(this.innerText, this)');
+        const courseCardEl = document.createElement(`div`);
         const courseArray = course.split("_");
         const p1El = document.createElement('p');
         const p2El = document.createElement('p');
@@ -38,19 +36,9 @@ async function displayCourses() {
     });
 
     const addCourseButtonEl = document.createElement(`div`);
+    addCourseButtonEl.classList.add(`addCourseButon`);
+
+    coursesDivEl.appendChild(addCourseButtonEl);
     
   }
   displayCourses();
-
-  function addToArray(self, item) {
-    if (coursesToRequest.indexOf(self) > -1) {
-      const indexToRemove = coursesToRequest.indexOf(self);
-      coursesToRequest.splice(indexToRemove, 1);
-      item.style.backgroundColor = "#FFC72C";
-    }
-    else {
-      coursesToRequest.push(self);
-      item.style.backgroundColor = "#F2A900";
-    }
-    console.log(coursesToRequest);
-  }
