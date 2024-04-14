@@ -53,10 +53,16 @@ body
 {
     position: absolute; 
     top: 20%;
-    left: 90%;
+    left: 80%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
+    display: inline; 
+ 
+}
+
+.navWrapper h3 a
+{
+    text-decoration: none; 
+    color: black; 
 }
 
 .pageFooter
