@@ -7,7 +7,7 @@
     <link href="sign-up.css" type="text/css" rel="stylesheet" />
     <title>Login | StudyHub</title>
 </head>
-<body>
+<body onload="displayCourses()">
     <div class="header">
         <nav>
             <div class="navWrapper">
@@ -46,10 +46,13 @@
 
     <div class="coursesModal" id="divCoursesModal">
         <p>Select Your Course(s)</p>
-        <input type="text" placeholder="Search"/>
+        <input type="text" id="searchInput" placeholder="Search"/>
         <!-- For each course, make a modalContent div -->
         <div class="modalContent">
-            <button>Course Name</button>
+            <button>CS 111</button>
+        </div>
+        <div class="modalContent">
+            <button>CS 112</button>
         </div>
     </div>
 </body>
@@ -57,4 +60,7 @@
 <footer class="pageFooter">
     <p>© 2024 StudyHub Team Hackathon Project</p>
 </footer>
+
+<script src="./js/courseSearch.js"></script>
+
 </html>
