@@ -6,13 +6,15 @@ const {
     getLoggedInUser,
     updateLoggedInUser,
     getAllUsernames,
-    getUserById
+    getUserById,
+    patchUserClasses
     
 } = require(`../controllers/user-controller`);
 
 router.route(`/`)
     .get(getLoggedInUser)
     .put(updateLoggedInUser)
+    .patch(patchUserClasses)
 
 router.route(`/id/:userId`)
     .get(getUserById)

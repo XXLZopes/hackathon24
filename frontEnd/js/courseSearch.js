@@ -82,7 +82,7 @@ async function updateUserCourses() {
 
   try {
       const response = await fetch(`http://localhost:3500/user/`, {
-          method: 'PUT',
+          method: 'PATCH',
           headers: {
               'Content-Type': 'application/json'
           },
