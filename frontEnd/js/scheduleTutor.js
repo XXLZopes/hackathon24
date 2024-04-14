@@ -20,10 +20,13 @@ async function displayCourses() {
         // console.log("course: ", course)
         let courseCardEl = document.createElement(`button`);
         courseCardEl.setAttribute('onclick', 'addToArray(this.innerText, this)');
+        course = course.replaceAll("__", "_");
         const courseArray = course.split("_");
         const p1El = document.createElement('p');
         const p2El = document.createElement('p');
         p1El.innerText = courseArray[0] + " " + courseArray[1];
+
+        console.log("p1El:", p1El.innerHTML)
         let p2ElText= "";
          courseArray.slice(2).forEach((element) => {
             p2ElText += element + " ";
@@ -54,3 +57,12 @@ async function displayCourses() {
     }
     console.log(coursesToRequest);
   }
+
+
+const findTutorsButton = document.getElementById("findTutorButton");
+findTutorsButton.addEventListener('click', () => {
+  const data = {info: coursesToRequest}
+  const w = window.open("tutorSessionResults.html")
+  w.data = data;
+
+})
