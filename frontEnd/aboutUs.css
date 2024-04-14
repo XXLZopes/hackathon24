@@ -23,6 +23,12 @@ img
     width: 100%;
     height: auto;
     border-radius: 50%; 
+    box-shadow: 4px 5px 4px black;
+}
+
+img:hover
+{
+    transition: .3s ease-in-out;
 }
 
 #meetHeader
