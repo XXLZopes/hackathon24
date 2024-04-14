@@ -10,11 +10,10 @@ const {
 
 router.route(`/`)
     .get(getLoggedInUser)
+    .put(updateLoggedInUser)
 
 router.route(`/login/`)
     .post(loginOrRegister)
-
-router.route(`/update/:userID`)
-    .put(updateLoggedInUser)
+    
 
 module.exports = router;

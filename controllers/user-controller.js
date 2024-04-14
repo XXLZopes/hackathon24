@@ -47,9 +47,10 @@ const userController = {
         })
     },
     updateLoggedInUser(req,res) {
-        //todo this wont work rn, if you want to test change it to params.userID
         const userID = req.session.userID;
         const updateData = req.body;
+
+        console.log(req.session);
           
         for (const key in updateData) {
             if (!(key in User.schema.paths))
