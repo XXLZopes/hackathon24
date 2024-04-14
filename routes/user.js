@@ -4,6 +4,8 @@ const router = express.Router();
 const {
     loginOrRegister,
     getLoggedInUser,
+    updateLoggedInUser,
+    
 } = require(`../controllers/user-controller`);
 
 router.route(`/`)
@@ -11,5 +13,8 @@ router.route(`/`)
 
 router.route(`/login/`)
     .post(loginOrRegister)
+
+router.route(`/update/:userID`)
+    .put(updateLoggedInUser)
 
 module.exports = router;
