@@ -1,3 +1,4 @@
+let coursesToRequest = [];
 
 async function displayCourses() {
     const requestData = {
@@ -17,7 +18,8 @@ async function displayCourses() {
     const coursesDivEl = document.querySelector(`#coursesDiv`);
     user.classList.forEach((course) => {
         console.log("course: ", course)
-        const courseCardEl = document.createElement(`div`);
+        let courseCardEl = document.createElement(`button`);
+        courseCardEl.setAttribute('onclick', 'addToArray(this.innerText)')
         const courseArray = course.split("_");
         const p1El = document.createElement('p');
         const p2El = document.createElement('p');
@@ -42,3 +44,14 @@ async function displayCourses() {
     
   }
   displayCourses();
+
+  function addToArray(self) {
+    if (coursesToRequest.indexOf(self) > -1) {
+      const indexToRemove = coursesToRequest.indexOf(self);
+      coursesToRequest.splice(indexToRemove, 1);
+    }
+    else {
+      coursesToRequest.push(self);
+    }
+    console.log(coursesToRequest);
+  }
