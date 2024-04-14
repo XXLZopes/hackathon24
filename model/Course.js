@@ -1,16 +1,14 @@
 const { Schema, model, Types } = require(`mongoose`);
 const Time = require("./Time");
 
-
-
 const CourseSchema = new Schema({
-    _id: {
+    CN: {
         type: Number,
         unique: true,
         required: true
     },
     
-    name: {
+    courseName: {
         type: String,
         required: true
     },
@@ -20,11 +18,11 @@ const CourseSchema = new Schema({
         required: true
     },
 
-    times: {
+    courseTimes: {
         type: [Time],
         default: []
     }
-});
+}, {_id: false});
 
 const Course = model('Course', CourseSchema);
 module.exports = Course;
