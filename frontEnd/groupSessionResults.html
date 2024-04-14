@@ -10,8 +10,7 @@
     <link rel="stylesheet" type="text/css"
           href="scheduleTutor.css"/>
 
-    <title>StudyHub Tutor Scheduling</title>
-    <script src="./js/scheduleTutor.js"></script>
+    <title>StudyHub Tutor Results</title>
 </head>
 <body>
 
@@ -19,27 +18,22 @@
       <div class="navWrapper">
         <ul id="navList">
           <li><a href="studentHomepage.html">Home</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="aboutUs.html">About Us</a></li> 
           <li><a href="profile.html">Profile</a></li>
         </ul>
         <h1>StudyHub</h1>
 
-        <h3 id="welcomeName">Welcome, <span id="welcomeUserName"></span></h3>
+        <h3 id="welcomeName">Welcome, <span id="welcomeUserName"></h3>
       </div>
     </nav>
 
-    
-    <h1 id="classQuestion">What courses would you like to be tutored in today?</h1>
-
-    <div id="coursesDiv">
-      
+    <div class="coursesDiv">
+        <!--dynamic elements (initially their courses, then have an add course button that adds a new course)-->
     </div>
-
-    <div id="findTutorButtonDiv"><button id="findTutorButton" onclick="window.location.href='tutorSessionResults.html';">Find Available Tutors</button></div>
 
     <footer class="pageFooter">
         <p>© 2024 StudyHub Team Hackathon Project</p>
   </footer>
-  <script src="js/populateClasses.js"></script>
+
 </body>
 </html>

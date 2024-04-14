@@ -1,6 +1,5 @@
 const User = require(`../model/User`);
 const { ObjectId } = require(`mongoose`);
-const mongoose = require(`mongoose`);
 
 const userController = {
     loginOrRegister(req,res) {
