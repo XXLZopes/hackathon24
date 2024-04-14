@@ -61,6 +61,7 @@ img
 
 #userCoursesList li {
     width: 45%;
+    min-width: fit-content;
     margin: .2rem;
     padding: .2rem;
     border: solid black 1.5px;
