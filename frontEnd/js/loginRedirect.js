@@ -16,13 +16,17 @@ function getForumData() {
     const fname = document.getElementById("fname_input").value;
     const lname = document.getElementById("lname_input").value;
     const courseList = (document.getElementById("coursesInput").value).split(',');
-
-
-    return JSON.stringify(dataToUpdate = {
-        firstName: fname,
-        lastName: lname,
-        classList: courseList
-      })
+    let dataToUpdate = {};
+    if (fname != "") {
+        dataToUpdate.firstName = fname;
+    }
+    if (lname != "") {
+        dataToUpdate.firstName = lname;
+    }
+    if (courseList != "") {
+        dataToUpdate.firstName = courseList;
+    }
+    return JSON.stringify(dataToUpdate);
 }
 
 
