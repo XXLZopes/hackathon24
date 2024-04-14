@@ -65,8 +65,11 @@ div.coursesModal
     background-color: #FFC72C;
     max-width: 80%;
     padding-bottom: 0.5em;
-    margin: 25vh auto 25vh auto;
+    margin: auto;
     font-family: Helvetica, sans-serif;
+    overflow-y: scroll;
+    max-height: 90%;
+    
 }
 
 div.coursesModal p
