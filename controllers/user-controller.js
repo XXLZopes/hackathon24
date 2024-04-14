@@ -42,7 +42,31 @@ const userController = {
             console.error(`Something went wrong when attempting to get the logged in user`);
             return res.status(500).json(err);
         })
-    }
+    },
+    updateLoggedInUser(req,res) {
+        //todo this wont work rn, if you want to test change it to params.userID
+        const userID = req.session.userID;
+        const updateData = req.body;
+          
+        for (const key in updateData) {
+            if (!(key in User.schema.paths))
+                return res.status(400).json({message: `The User schema does not have the property ${key}.`});
+        }
+        User.findOneAndUpdate({ _id: userID}, updateData, {new: true})
+        .then((updatedUser) => {
+            if (!updatedUser)
+                return res.status(404).json({message: `No User with the ID of ${userID} found.`});
+            return res.status(200).json({
+                message: `User with ID: ${userID} successfully updated.`,
+                updatedUser: updatedUser
+            });
+        })
+        .catch((err) => {
+            console.log(`Something went wrong when attempting to update the user with the ID: ${userID}`);
+            console.log(err)
+            res.status(500).json(err);
+        });
+ }
 }
 
 module.exports = userController;
