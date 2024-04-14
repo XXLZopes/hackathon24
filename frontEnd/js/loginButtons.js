@@ -8,8 +8,10 @@ function displaySubmit() {
     alert("Please enter an email.");
     return;
   } else {
-    document.querySelector("#loginEmail").innerHTML =
-      '<label for="code">Code:</label> <input type="text" name="code" id="codeInput"/> <button id="submit" onclick="verifyEmail()">Submit</button>';
+    document.querySelector("#loginEmail").querySelector("#emailLabel").innerHTML = 'Enter Code:'
+    document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('type','text');
+    document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('id','codeInput');
+    document.querySelector("#loginEmail").querySelector("#sendCode").setAttribute('onclick','verifyEmail()');
   }
 }
 
