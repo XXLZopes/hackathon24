@@ -4,6 +4,16 @@ let email;
 
 function displaySubmit() {
   email = document.querySelector("#emailInput").value;
+
+  const regex = /@humboldt\.edu$/;
+  const result = regex.test(email);
+  console.log(result); // Output will be true or false
+
+  if (!result) {
+    alert('You must enter a Humboldt email address.');
+    window.location.reload();
+  }
+
   if (!email) {
     alert("Please enter an email.");
     return;
