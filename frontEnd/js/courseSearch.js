@@ -45,7 +45,6 @@ function startSearchListener() {
     const { value } = event.target;
 
     const searchQuery = value.toLowerCase();
-    console.log(divWrapperArray)
 
     divWrapperArray.forEach((element) => {
       if (
