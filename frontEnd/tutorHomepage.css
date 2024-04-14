@@ -80,3 +80,10 @@
     bottom: 70px; 
 
 }
+
+#viewSelected
+{
+    background-color: #CDDAD5;
+    padding: 0.2em;
+    border-radius: 1em; 
+}
