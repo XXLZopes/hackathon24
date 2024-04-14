@@ -12,7 +12,7 @@
 
     <title>StudyHub Group Scheduling</title>
 </head>
-<body>
+<body onload="findUser()">
 
     <nav>
       <div class="navWrapper">
@@ -32,11 +32,12 @@
     
     <div class="nameInfo">
         <label for="groupName">Please enter a username:</label>
-        <input type="text" name="name" id="groupName" placeholder="ex: lay6" />
+        <input list="groupName" name="groupName" id="nameInput" placeholder="Ex. fcr15"/>
+        <datalist id="groupName"></datalist>
+        </select>
         <p>Group Members:</p>
-        <ul id="groupMemberNameList">
-
-        </ul>
+        <ul id="groupMemberNameList"></ul>
+        <button id="addName" onclick="addToGroup()"></button>
     </div>
 
     <h2 id="timeQuestion">How long is your meeting?</h1>
@@ -66,4 +67,5 @@
   </footer>
 
 </body>
+<script src="./js/findUser.js"></script>
 </html>
