@@ -18,7 +18,7 @@ const UserSchema = new Schema({
         type: [String],
         default: []
     },
-    sugnedUpTutorSessions: {
+    signedUpTutorSessions: {
         type: [String],
         default: []
     },

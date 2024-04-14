@@ -34,7 +34,7 @@ const userController = {
         }
         User.findById(userId)
         .then((user) => {
-            console.log("user: ", user);
+            // console.log("user: ", user);
             if (!user) {
                 return res.status(404).json({message: `No user with the id ${userId} found!`});
             }
