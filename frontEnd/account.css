@@ -1,0 +1,88 @@
+.login
+{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5em solid #F2A900;
+    border-radius: 1em;
+    background-color: #FFC72C;
+    width: 35em;
+    padding-bottom: 0.5em;
+    margin: 25vh auto 25vh auto;
+}
+
+.navWrapper
+{
+    display: flex; 
+    justify-content: center; 
+}
+
+#loginTitle, #updateAcctTitle
+{
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label
+{
+    padding: 1em;
+    color: black;
+}
+
+div#loginEmail 
+{
+    display: default;
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submitButton
+{
+    margin: auto;
+    margin-top: 1vh;
+    background-color: #00856A;
+    border: 0.2em solid #004C46; 
+    color: #F5F3E7; 
+    border-radius: 1em; 
+    font-size: 110%;
+    padding: 0.3em;
+}
+
+#loginFooter, #loginBack
+{
+    margin: auto;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#codeInput
+{
+    margin: auto;
+    margin-left: 1vh;
+}
+
+.pageFooter
+{
+    background-color: #FFC72C; 
+    text-align: center; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 600)
+{
+    div.login
+    {
+        margin: 10%;
+        width: 80%;
+        height: 50vh;
+    }
+}
