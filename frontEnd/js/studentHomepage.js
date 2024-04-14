@@ -52,7 +52,14 @@ async function displayCourses() {
           console.log("data: ", user);
           return user;
     })
+    
   });
+
+  let firstName = userData.firstName;
+  console.log(firstName)
+
+  const welcomeNameEl = document.querySelector('#welcomeUserName'); 
+  welcomeNameEl.innerText = firstName; 
 
   const tutorSessions = userData.signedUpTutorSessions;
   // console.log(userData.signedUpTutorSessions);
