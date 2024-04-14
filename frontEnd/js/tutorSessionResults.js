@@ -17,16 +17,20 @@ cookies.forEach(cookie => {
     }
 });
 
+
+async function findTutorSessions(courseName)  {
+  await fetch(`http://localhost:3500/tutor/courseName/${courseName}`).then((result) => {
+  return result.json()
+});
+}
+
 // console.log(courseDataValue);
 
 courseDataValue.forEach((course) => {
   const courseArray = course.split("\n\n")
-  console.log(courseArray)
   const courseTitle = courseArray[0] + " " + courseArray[1];
 
   const courseDivEl = document.querySelector("#coursesDiv");
-
-  console.log(courseDivEl);
 
   const courseConEl = document.createElement('div');
   const courseTitleEl = document.createElement('div');
