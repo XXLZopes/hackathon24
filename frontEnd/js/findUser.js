@@ -24,10 +24,13 @@ async function findUser()  {
 }
 
 function addToGroup() {
+  if (inputEL.value && userNameArray.indexOf(inputEL.value) > -1) {
     let nameToAdd = document.createElement("li");
     nameToAdd.innerHTML = inputEL.value;
     //datalistEl.removeChild(document.getElementsByClassName(inputEL.getAttribute('value').replaceAll(" ", "")));
     groupMembersEl.appendChild(nameToAdd);
+  }
+    
 }
 
 function clearAll() {
