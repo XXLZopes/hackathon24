@@ -84,7 +84,7 @@
 
 #viewSelected
 {
-    background-color: #CDDAD5;
+    text-decoration: underline;
     padding: 0.2em;
     border-radius: 1em; 
 }

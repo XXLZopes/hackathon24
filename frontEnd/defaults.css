@@ -35,6 +35,7 @@ body
 #navList li
 {
     height: fit-content;
+    padding: 1rem
 }
 
 #navList ul
@@ -46,14 +47,16 @@ body
 {
     text-decoration: none; 
     color: black;
+    padding: 0.3em;
+    border-radius: 1em;
 }
 
 #navList a:hover
 {
     background-color: #004C46;
     color: #F5F3E7;
-    border-radius: 1em;
-    padding: 0.1em;
+    
+    transition: .3s
 }
 
 #burger
@@ -86,6 +89,16 @@ body
     text-decoration: none; 
     color: black;
 }
+
+.navWrapper h1
+{
+    font-size: 2rem;
+}
+
+/* 
+#welcomeHeader {
+    color: ;
+} */
 /*
 .navWrapper ul
 {

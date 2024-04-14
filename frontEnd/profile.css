@@ -1,3 +1,7 @@
+#profileDiv {
+    padding: .5rem;
+}
+
 .profileInfoDiv
 {
     margin-top: 4em;
@@ -26,6 +30,13 @@
 
 }
 
+.leftProfile img
+{
+    width: 100%;
+    height: auto;
+
+}
+
 #hi
 {
     text-align: center; 
@@ -41,7 +52,18 @@ img
 
 #userCoursesList
 {
-    padding-left: 5em; 
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* padding-left: 5em;  */
+}
+
+#userCoursesList li {
+    width: 45%;
+    margin: .2rem;
+    padding: .2rem;
+    border: solid black 1.5px;
 }
 
 
@@ -61,7 +83,17 @@ button
 .rightButton
 {
     max-width: 100%; 
-    margin-top: 1em; 
+    margin: 1em; 
+}
+
+.rightButton button {
+    border: outset black 3px;
+}
+
+.rightButton button:hover {
+    color: black;
+    transition: .3s;
+    scale: 1.02;
 }
 
 @media screen and (max-width: 450)

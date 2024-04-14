@@ -32,6 +32,12 @@
     overflow-y: scroll;
 }
 
+.dayCard:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: .2s;
+}
+
 .fullScreen {
     position: fixed;
     top: 0;
@@ -47,6 +53,16 @@
 .fullScreen .dayCard {
     width: 50vw;
     height: 50vw;
+}
+
+.fullScreen .dayCard .dayHeader {
+    font-size: 1.3rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fullScreen .dayCard:hover {
+    scale: 1
 }
 
 .dayCard .hiddenInfo {
@@ -128,7 +144,8 @@
 
 #viewSelected
 {
-    background-color: #CDDAD5;
+    /* background-color: #CDDAD5; */
+    text-decoration: underline;
     padding: 0.2em;
     border-radius: 1em; 
 }
