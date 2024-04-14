@@ -43,6 +43,32 @@ async function displayCourses() {
       divWrapperArray.splice(0, 4);
       startSearchListener();
     });
+
+    
+
+    for(className of populateButtons()) {
+      //todo 
+    };
+}
+
+async function populateButtons() {
+  let results = [];
+  try {
+    const response = await fetch(`http://localhost:3500/user/courses`, {
+        method: 'GET',
+        credentials: 'include',
+    });
+    const data = await response.json();
+    if (response.ok) {
+        console.log('User Course:', data);
+        results.push(data);
+    } else {
+        throw new Error(`Server responded with status ${response.status}: ${data.message}`);
+    }
+} catch (error) {
+    console.error('Error fetching course data:', error);
+    results.push(null);  
+}
 }
 
 submitCoursesButton.addEventListener('click', postSelectedCourses);
