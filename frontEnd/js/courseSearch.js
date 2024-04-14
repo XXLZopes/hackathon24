@@ -12,7 +12,7 @@ async function displayCourses() {
   })
   
   courses.forEach((element) => {
-    let courseDiv = document.createElement("div");
+    const courseDiv = document.createElement("div");
     courseDiv.classList.add("modalContent");
     divWrapperEl.appendChild(courseDiv);
     let courseButton = document.createElement("button");
