@@ -69,6 +69,25 @@ input[type="text"]
 {
     display: grid; 
     grid-template-columns: 10% auto; 
-    grid-auto-rows: minmax(1.5em, auto); 
+    grid-auto-rows: minmax(1em, auto); 
     gap: 0.5em;
+}
+
+#addName
+{
+    background-color: #00856A; 
+    color: #F5F3E7;
+    border: none; 
+    border-radius: 2em;
+    padding: 0.6em;
+}
+
+#clearAll
+{
+    background-color: red; 
+    color: #F5F3E7;
+    outline-color: black; 
+    border: none; 
+    border-radius: 2em;
+    padding: 0.6em;
 }

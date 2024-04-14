@@ -29,3 +29,7 @@ function addToGroup() {
     //datalistEl.removeChild(document.getElementsByClassName(inputEL.getAttribute('value').replaceAll(" ", "")));
     groupMembersEl.appendChild(nameToAdd);
 }
+
+function clearAll() {
+  groupMembersEl.innerHTML = ""; 
+}
