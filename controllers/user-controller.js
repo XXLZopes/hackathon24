@@ -152,6 +152,36 @@ const userController = {
     }
  },
 
+removeUserClass(req, res) {
+    const userID = req.session.userId;
+    const classNameToRemove = req.body.className;
+
+    if (!classNameToRemove) {
+        return res.status(400).json({ message: "No className provided." });
+    }
+
+    
+    User.findOneAndUpdate(
+        { _id: userID },
+        { $pull: { classList: classNameToRemove } },
+        { new: true }
+    )
+    .then((updatedUser) => {
+        if (!updatedUser) {
+            return res.status(404).json({ message: `No User with the ID of ${userID} found.` });
+        }
+        res.status(200).json({
+            message: `Class ${classNameToRemove} successfully removed from user.`,
+            updatedUser: updatedUser
+        });
+    })
+    .catch((err) => {
+        console.error(`Error when attempting to remove class from the user with the ID: ${userID}`, err);
+        res.status(500).json({ message: "Error updating user.", error: err });
+    });
+},
+
+
  patchUserClasses(req, res) {
     const userID = req.session.userId;
     const updateData = req.body;

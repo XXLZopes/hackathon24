@@ -9,7 +9,8 @@ const {
     getUserById,
     patchUserClasses,
     getUserCourseNames,
-    patchTutorSessions
+    patchTutorSessions,
+    removeUserClass
     
 } = require(`../controllers/user-controller`);
 
@@ -23,6 +24,9 @@ router.route(`/courses/`)
 
 router.route(`/tutorSession/`)
     .patch(patchTutorSessions)
+
+router.route(`/removeClass/`)
+    .patch(removeUserClass)
 
 router.route(`/id/:userId`)
     .get(getUserById)

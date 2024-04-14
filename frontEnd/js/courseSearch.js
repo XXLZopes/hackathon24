@@ -149,10 +149,36 @@ document.addEventListener('DOMContentLoaded', function() {
       if (index > -1) {
           selectedCourses.splice(index, 1);
       } else {
+          removeClassFromUser(courseName);
           selectedCourses.push(courseName);
       }
       console.log('Selected Courses:', selectedCourses);
     }
+
+
+    async function removeClassFromUser(className) {
+      const response = await fetch("http://localhost:3500/user/removeClass/", {
+          method: 'PATCH',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: JSON.stringify({ className: className }),
+          credentials: 'include'  // if your API requires session cookies to be sent
+      });
+  
+      if (response.ok) {
+          const data = await response.json();
+          console.log('Success:', data);
+          return data;
+      } else {
+          // Handle errors, e.g., display an error message
+          const errorData = await response.json();
+          console.error('Error:', errorData.message);
+          throw new Error(errorData.message);
+      }
+  }
+  
 
 function startSearchListener() {
   searchEl.addEventListener("keyup", (event) => {
