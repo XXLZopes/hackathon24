@@ -65,3 +65,13 @@ div#loginEmail
     bottom: 0;
     width: 100%;
 }
+
+@media screen and (max-width: 600)
+{
+    div.login
+    {
+        margin: 10%;
+        width: 80%;
+        height: 50vh;
+    }
+}

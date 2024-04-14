@@ -1,6 +1,6 @@
 const { Schema, model, Types } = require(`mongoose`);
 
-const TimeSchema = new Schema ({
+const Time = new Schema ({
 
     day: {
         type: String,
@@ -20,5 +20,4 @@ const TimeSchema = new Schema ({
     }
 }, {_id: false });
 
-const Time = mongoose.model('Time', TimeSchema);
 module.exports = Time;
