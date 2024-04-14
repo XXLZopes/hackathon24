@@ -1,6 +1,16 @@
 const submitButton = document.querySelector("#submitButton");
 let url = "http://localhost:3500";
 
+window.onload = function() {
+    fetch('http://localhost:3500/test', {
+        credentials: 'include' // This tells the browser to include cookies with the request
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+    console.log('help')
+};
+
 
 function getForumData() {
     const fname = document.getElementById("fname_input").value;

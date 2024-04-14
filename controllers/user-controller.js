@@ -47,10 +47,11 @@ const userController = {
         })
     },
     updateLoggedInUser(req,res) {
-        const userID = req.session.userID;
+        const userID = req.session.userId;
         const updateData = req.body;
 
         console.log(req.session);
+        console.log(req.session.sessionID)
           
         for (const key in updateData) {
             if (!(key in User.schema.paths))

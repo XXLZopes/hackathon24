@@ -39,6 +39,21 @@ app.use(`/subject`, subjectRouter);
 app.use(`/tutor`,tutorRouter);
 app.use(`/studygroup`,studyGroupRouter);
 
+
+app.get('/test', (req, res) => {
+    if (req.session) {
+      if (!req.session.test) {
+          req.session.test = 0
+      }
+      req.session.test = req.session.test + 1
+      console.log(req.session.test)
+      console.log('Session ID:', req.sessionID);
+      console.log('User ID:', req.session.userId);
+    }
+  
+    res.send('Session ID has been logged to the console.');
+  });
+
 mongoose
     .connect(
         uri,
