@@ -13,7 +13,7 @@ async function displayCourses() {
             user=data;
       })
     })
-
+  
     // console.log(user);
     let firstName = user.firstName;
     let lastName = user.lastName;
@@ -21,35 +21,14 @@ async function displayCourses() {
     let email = user.email;
     let classList = user.classList;
     let username = email.split('@')[0];
-
-
+  
+  
     console.log(firstName, lastName);
     console.log(email);
     console.log(classList);
-
-    const hiUserNameEl = document.querySelector('#hiUserName');
-    hiUserNameEl.innerText = firstName; 
-
+  
     const welcomeUserNameEl = document.querySelector('#welcomeUserName');
     welcomeUserNameEl.innerText = firstName; 
-
-    const userNameEl = document.querySelector('#profileDiv p span#userName');
-    userNameEl.innerText = username;
-
-    const userFullNameEl = document.querySelector('#profileDiv p span#userFullName');
-    userFullNameEl.innerText = fullName;
-
-    const userEmailEl = document.querySelector('#profileDiv p span#userEmail');
-    userEmailEl.innerText = email;
-
-    const userCoursesList = document.querySelector('#profileDiv p ul#userCoursesList');
-
-    for (var i = 0; i < classList.length; i++){
-        var list = classList[i];
-        list = document.createElement('li');
-        list.innerText = classList[i];
-        document.getElementById('userCoursesList').appendChild(list);
-    }
-
+  
   }
   displayCourses();
