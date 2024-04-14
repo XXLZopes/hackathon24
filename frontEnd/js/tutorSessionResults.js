@@ -17,20 +17,65 @@ cookies.forEach(cookie => {
     }
 });
 
+const dayMap = {M: 'Monday', T: 'Tuesday', W: 'Wednsday', R: 'Thursday', F: 'Friday', S: 'Saturday', U: 'Sunday'}
 
-async function findTutorSessions(courseName)  {
+
+async function findTutorSessions(courseName, parentEl)  {
   await fetch(`http://localhost:3500/tutor/courseName/${courseName}`).then((result) => {
+    // console.log("asdasddas", result.json());
   return result.json()
-});
+})
+.then((tutorSessions) => {
+  const createdDays = [];
+  if (tutorSessions.length <= 0) {
+    parentEl.querySelector(".tutorCon").innerHTML = `
+      <div class="noTutorSessions">
+        <p>No tutor sessions avalible</p>
+      </div>`
+    console.log(parentEl)
+  }
+  tutorSessions.forEach((element) => {
+    element.time.forEach((d)=> {
+      const day = d.day;
+      if (createdDays.indexOf(day) == -1) {
+        createdDays.push(day);
+        const calEl = document.createElement('div');
+        calEl.innerHTML = `<p class="calTitle">${dayMap[day]}</p>`
+        calEl.id = day;
+        calEl.classList.add('calDiv');
+        parentEl.querySelector(".tutorCon").appendChild(calEl)
+      }
+      const startTime = d.start_time;
+      const endTime = d.end_time;
+      const timeRange = startTime + "-" + endTime;
+      const timeEl = document.createElement('p');
+      timeEl.innerText = timeRange;
+      parentEl.querySelector(`#${day}`).appendChild(timeEl)
+      console.log("day:", day)
+    })
+    console.log("adddds", element);
+
+
+  })
+  // console.log("ts: ", tutorSessions)
+})
 }
 
 // console.log(courseDataValue);
 
-courseDataValue.forEach((course) => {
+courseDataValue.forEach( async (course) => {
   const courseArray = course.split("\n\n")
-  const courseTitle = courseArray[0] + " " + courseArray[1];
+  let courseName = courseArray.join("_");
+  // courseName = courseName.replaceAll("__", "_")
+  courseName = courseName.replaceAll(" ", "_")
+
+  // console.log("cNj:", courseName);
 
   const courseDivEl = document.querySelector("#coursesDiv");
+
+  const courseTitle = courseArray[0] + " " + courseArray[1];
+
+  
 
   const courseConEl = document.createElement('div');
   const courseTitleEl = document.createElement('div');
@@ -45,7 +90,14 @@ courseDataValue.forEach((course) => {
   courseConEl.appendChild(courseTitleEl);
   courseConEl.appendChild(tutorConEl);
 
-
+  const tutorSessions = await findTutorSessions(courseName, courseConEl);
+  
+  // if (courseConEl.querySelector(".tutorCon").innerHTML.length <= 0) {
+  //   courseConEl.querySelector(".tutorCon").innerHTML = `
+  //   <div class="noTutorSessions">
+  //     <p>No tutor sessions avalible</p>
+  //   </div>`
+  // }
   courseDivEl.appendChild(courseConEl)
 
 })

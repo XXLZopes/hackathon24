@@ -22,7 +22,7 @@ const CourseSchema = new Schema({
         type: [Time],
         default: []
     }
-}, {_id: false});
+});
 
 const Course = model('Course', CourseSchema);
 module.exports = Course;

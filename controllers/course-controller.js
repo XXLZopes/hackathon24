@@ -1,6 +1,8 @@
 const Course = require(`../model/Course`);
 const {ObjectId} = require(`mongoose`);
 
+const {mongoose} = require(`mongoose`);
+
 const courseController = {
     createCourse({ body }, res) {
         Course.create(body)
