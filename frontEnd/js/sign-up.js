@@ -7,5 +7,4 @@ modalCon.querySelector("#closeCoursesModal").addEventListener("click", _=>{
 addCourseInput.addEventListener("focus", _=>{
     modalCon.style.display = "flex";
     modalCon.style.justifyContent = "center";
-    console.log("asdasdasdadsads", modalCon)
 })
