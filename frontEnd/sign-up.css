@@ -96,12 +96,7 @@ div.modalContent button
     min-width: 7em;
 }
 
-@media screen and (max-width: 600)
+#submitButton
 {
-    div.signUp, div.coursesModal
-    {
-        margin: 10%;
-        width: 80%;
-        height: 50vh;
-    }
+    width: 25%;
 }
