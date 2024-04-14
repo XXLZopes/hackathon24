@@ -104,6 +104,8 @@
 #closeSessionModal
 {
     cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .sessionModal
@@ -111,11 +113,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    max-width: 80%;
+    max-width: 60%;
     padding-bottom: 0.5em;
     padding-left: 1em;
     margin: 25vh auto 25vh auto;
@@ -132,6 +135,8 @@
 {
     display: flex;
     align-content: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .timeInput input
@@ -147,4 +152,9 @@
 #submitButton
 {
     width: 25%;
+}
+
+#submitDiv{
+    display:flex;
+    justify-content: center;
 }
