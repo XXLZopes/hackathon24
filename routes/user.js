@@ -11,7 +11,7 @@ const {
     getUserCourseNames,
     patchTutorSessions,
     deleteTutorSession,
-    // removeUserClass
+    removeUserClass
     
 } = require(`../controllers/user-controller`);
 
@@ -28,7 +28,7 @@ router.route(`/tutorSession/`)
     .delete(deleteTutorSession)
 
 router.route(`/removeClass/`)
-    // .patch(removeUserClass)
+    .patch(removeUserClass)
 
 router.route(`/id/:userId`)
     .get(getUserById)
