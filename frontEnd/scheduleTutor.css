@@ -37,7 +37,37 @@
     padding: 0.6em;
 }
 
-.courseCardDiv
+#coursesDiv {
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1 1 50%
+}
+
+.courseCard
 {
-    background-color: #F5F3E7; 
+    border: 0.5em solid #F2A900;
+    background-color: #FFC72C;
+    margin: 1rem;
+    padding: 1rem;
+    width: 40%;
+    max-width: 10rem;
+    height: 40%;
+    min-height: 10rem;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.addCourseButon {
+    width: 40%;
+    max-width: 10rem;
+    height: 10rem;
+    background-color: aliceblue;
+    border: 0.5em solid white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
 }
