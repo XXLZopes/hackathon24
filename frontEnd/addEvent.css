@@ -107,7 +107,6 @@
 
 .eventModal
 {
-    /* Default display: none, change to display: flex onclick of AddEvent button */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

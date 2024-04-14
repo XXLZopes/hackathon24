@@ -29,6 +29,17 @@ async function displayCourses() {
   
     const welcomeUserNameEl = document.querySelector('#welcomeUserName');
     welcomeUserNameEl.innerText = firstName; 
-  
-  }
-  displayCourses();
+}
+displayCourses();
+
+const addSessionButtons = document.querySelectorAll(".addSessionButton");
+const modalCon = document.querySelector("#sessionModalCon");
+modalCon.querySelector("#closeSessionModal").addEventListener("click", _=>{
+    modalCon.style.display = "none";
+})
+addSessionButtons.forEach((button)=>{
+    button.addEventListener("click", _=>{
+        modalCon.style.display = "inline";
+        console.log(modalCon)
+    })
+})

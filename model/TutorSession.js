@@ -3,14 +3,12 @@ const Time = require("./Time");
 
 const tutorSessionSchema = new Schema({
     tutor_id: {
-        type: Number,
-        unique: true,
+        type: String,
         required: true
     },
 
     course_id: {
-        type: Number,
-        unique: true,
+        type: String,
         required: true
     },
 

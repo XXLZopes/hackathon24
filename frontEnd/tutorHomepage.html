@@ -15,21 +15,27 @@
 </head>
 <body>
 
-    <nav>
-      <div class="navWrapper">
-        <ul id="navList">
-          <li><a href="tutorHomepage.html">Home</a></li>
-          <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="profile.html">Profile</a></li>
-        </ul>
-        <h1>StudyHub</h1>
+  <nav>
+  <div class="navWrapper">
+    <div id="burger">
+    <ul id="navList">
+      <li><a href="tutorHomepage.html">Home</a></li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </div>
+  <div id="logo">
+    <h1>StudyHub</h1>
+  </div>
 
-        <h3 id="welcomeHeader">Welcome, <span id="welcomeUserName"></span> <br/>
-            <a href="studentHomepage.html">Student View</a>  |
-            <a href="tutorHomepage.html"><span id="viewSelected">Tutor View</span> </a>
-        </h3>
-      </div>
-    </nav>
+  <div id="personalizedWelcome">
+    <h3 id="welcomeHeader">Welcome, <span id="welcomeUserName"></span> <br/>
+        <a href="studentHomepage.html">Student View</a>  |
+        <a href="tutorHomepage.html"><span id="viewSelected">Tutor View</span> </a>
+    </h3>
+  </div>
+</div>
+</nav>
 
     <div class="weekDiv">
       <h1 id="weekHeader">Your Weekly Schedule</h1>
@@ -92,84 +98,42 @@
         <button class="addSessionButton">Add Session</button>
       </div>
   </div>
-
-  <div class="sessionModal" id="divSessionModal">
-    <p>Edit Session</p>
-    <div class="dayInput">
-      <label for="dotw">Select Day:</label>
-      <select name="dotw" id="daySelection">
-        <option value="monday">Monday</option>
-        <option value="tuesday">Tuesday</option>
-        <option value="wednesday">Wednesday</option>
-        <option value="thursday">Thursday</option>
-        <option value="friday">Friday</option>
-        <option value="saturday">Saturday</option>
-        <option value="sunday">Sunday</option>
-      </select>
-    </div>
-    <div class="timeInput">
-      <label for="time">Select Time Period:</label>
-      <input type="time" id="startTime"/>
-      <label for="time">until</label>
-      <input type="time" id="endTime"/>
-    </div>
-    <div>
-      <label for="course">Select Course:</label>
-      <select name="course" id="courseSelection">
-        <!-- Populate with options for each course in user's tutor table -->
-        <option value="CS 111">CS 111</option>
-      </select>
-    </div>
-<<<<<<< Updated upstream
-
-    <div class="dayCard">
-      <div class="dayHeader">Thursday</div>
-      <p>
-        <ul id="thurScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
-    </div>
-
-    <div class="dayCard">
-      <div class="dayHeader">Friday</div>
-      <p>
-        <ul id="friScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
-    </div>
-
-    <div class="dayCard">
-      <div class="dayHeader">Saturday</div>
-      <p>
-        <ul id="satScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
-    </div>
-
-    <div class="dayCard">
-      <div class="dayHeader">Sunday</div>
-      <p>
-        <ul id="sunScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
+  
+  <div class="sessionModalCon" id="sessionModalCon">
+    <div class="sessionModal" id="divSessionModal">
+      <div class="closeButton" id="closeSessionModal">x</div>
+      <p>Edit Session</p>
+      <div class="dayInput">
+        <label for="dotw">Select Day:</label>
+        <select name="dotw" id="daySelection">
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+        </select>
+      </div>
+      <div class="timeInput">
+        <label for="time">Select Time Period:</label>
+        <input type="time" id="startTime"/>
+        <label for="time">until</label>
+        <input type="time" id="endTime"/>
+      </div>
+      <div>
+        <label for="course">Select Course:</label>
+        <select name="course" id="courseSelection">
+          <!-- Populate with options for each course in user's tutor table -->
+          <option value="CS 111">CS 111</option>
+        </select>
+      </div>
+      <button id="submitButton">Submit</button>
     </div>
 </div>
-
-
-<div class="homepageButtonRow">
-=======
-  </div>
->>>>>>> Stashed changes
-
-</div>
-
-
-<button id="floatingButton" onclick="window.location.href ='https://learning.humboldt.edu/after-hours-tutoring';">Need After Hours Tutoring?</button>
-
 
     <footer class="pageFooter">
           <p>© 2024 StudyHub Team Hackathon Project</p>
-          <p id="afterHoursLink"><a href="https://learning.humboldt.edu/after-hours-tutoring" id="needTutorLink">Need After Hours Tutoring?</a></p>
     </footer>
 
     <script src="./js/tutorHomepage.js"></script>

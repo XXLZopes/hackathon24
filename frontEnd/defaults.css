@@ -1,6 +1,9 @@
 *
 {
     box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Helvetica, sans-serif;
 }
 
 body
@@ -16,20 +19,83 @@ body
     top: 0;
     left: 0;
     background-color: #FFC72C; 
+    display: flex; 
     
 }
 
+#navList
+{
+    display: flex; 
+    flex-direction: row; 
+    list-style-type: none;
+    gap: 0.5em; 
+    align-items: center;
+}
+
+#navList li
+{
+    height: fit-content;
+}
+
+#navList ul
+{
+    align-items: center;
+}
+
+#navList a
+{
+    text-decoration: none; 
+    color: black;
+}
+
+#navList a:hover
+{
+    background-color: #004C46;
+    color: #F5F3E7;
+    border-radius: 1em;
+    padding: 0.1em;
+}
+
+#burger
+{
+    display: flex; 
+    justify-content: center;
+    width: 33%;
+    
+}
+
+#logo
+{
+    display: flex; 
+    justify-content: center;
+    width: 33%;
+    align-items: center;
+}
+
+#personalizedWelcome
+{
+    display: flex; 
+    justify-content: center;
+    width: 33%;
+    align-items: center;
+    gap: 1em;
+}
+
+#personalizedWelcome a
+{
+    text-decoration: none; 
+    color: black;
+}
+/*
 .navWrapper ul
 {
     display: flex; 
     flex-direction: row; 
     gap: 0.5em; 
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute; 
-    top: 30%;
-    margin-left: 1em;
+    margin-left: 2em; 
+    padding-top: 1.5em;
+
 }
 
 .navWrapper ul a
@@ -40,35 +106,33 @@ body
 
 .navWrapper ul a:hover
 {
-    color: #004C46;
+    background-color: #004C46;
+    color: #F5F3E7;
+    border-radius: 1em;
+    padding: 0.1em;
 }
 
 .navWrapper h1
 {
-    position: absolute; 
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    
+    width: 5em; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: -5em; 
 }
 
 .navWrapper h3
 {
-    position: absolute; 
-    top: 20%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    display: inline; 
- 
+    width: 15em; 
+    margin-left: auto; 
+    margin-right: 1em; 
+    top: -5em; 
 }
 
 .navWrapper h3 a
 {
     text-decoration: none; 
     color: black; 
-}
+}*/ 
 
 .pageFooter
 {
@@ -78,7 +142,7 @@ body
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 5%; 
+    height: 10vh; 
 }
 
 button
@@ -89,4 +153,22 @@ button
 .pageFooter p
 {
     text-align: center; 
+}
+
+@media screen and (max-width: 600px)
+{
+    #navList
+    {
+        flex-direction: column;
+        list-style-type:circle;
+        align-items: start;  
+        gap: 0.1em;
+    }
+
+    h3 
+    {
+        font-size: 50%; 
+        text-wrap: wrap;
+    }
+    
 }
