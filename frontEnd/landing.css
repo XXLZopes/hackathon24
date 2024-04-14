@@ -111,6 +111,7 @@ body
     border: 0.5em solid #F2A900; 
     border-radius: 1em; 
     /* font-size: 2em;  */
+    font-size: 3.5vw;
     padding: 2em; 
     width: 50%;
     /* height: 50%; */
@@ -119,7 +120,8 @@ body
 #tutorButton
 {
     padding-left: 2.6em;
-    padding-right: 2.6em; 
+    padding-right: 2.6em;
+    font-size: 3.5vw;
 }
 
 .pageFooter
