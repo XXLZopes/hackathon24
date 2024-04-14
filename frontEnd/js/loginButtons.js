@@ -83,11 +83,7 @@ async function verifyEmail() {
       })
       .then((data) => {
         console.log("data.verified: ", data);
-<<<<<<< Updated upstream
         window.location.href = "./sign-up.html";
-=======
-        window.location.href = "./studentHomepage.html";
->>>>>>> Stashed changes
         return data.verified;
       })
       .catch((error) => {
@@ -102,5 +98,8 @@ const sendCodeEl = document.querySelector("#sendCode");
 sendCodeEl.addEventListener("click", () => {
   if (email) {
     sendEmail();
+    sendCodeEl
+    var new_element = sendCodeEl.cloneNode(true);
+    sendCodeEl.parentNode.replaceChild(new_element, sendCodeEl);
   }
 });

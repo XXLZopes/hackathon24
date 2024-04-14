@@ -18,7 +18,9 @@
     max-width: 200px;
     border-top-left-radius: 2em; 
     border-bottom-left-radius: 2em; 
-    padding: 2em;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+
 }
 
 #hi
