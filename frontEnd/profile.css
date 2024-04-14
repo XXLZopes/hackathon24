@@ -1,0 +1,45 @@
+.profileInfoDiv
+{
+    background-color: #F5F3E7;
+    border-radius: 2em; 
+    display: flex; 
+    flex-direction: row;
+}
+
+.leftProfile
+{
+    background-color: #FFC72C; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    width: 30%; 
+
+}
+
+#hi
+{
+    text-align: center; 
+}
+
+img
+{
+    width: 90%; 
+    height: 90%; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.rightProfile
+{
+    margin-left: 1em; 
+}
+
+button
+{
+    background-color: #FFC72C; 
+    border: none; 
+    border-radius: 1em; 
+    padding: 1em; 
+}
+
