@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css"
+          href="defaults.css"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="tutorHomepage.css"/>
+
+    <title>StudyHub Tutor Home</title>
+</head>
+<body>
+
+    <nav>
+      <div class="navWrapper">
+        <ul id="navList">
+          <li><a href="tutorHomepage.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <h1>StudyHub</h1>
+
+        <h3 id="welcomeHeader">Welcome, <span id="welcomeUserName"></span> <br/>
+            <a href="studentHomepage.html">Student View</a>  |
+            <a href="tutorHomepage.html">Tutor View </a>
+        </h3>
+      </div>
+    </nav>
+
+    <div class="weekDiv">
+      <h1 id="weekHeader">Weekly Header</h1>
+    </div>
+
+<div class="dayCardRow">
+    <div class="dayCard">
+      <div class="dayHeader">Monday</div>
+      <p>
+        <ul id="monScheduleList"></ul>
+      </p>
+      <button class="addSessionButton">Add Session</button>
+    </div>
+
+    <div class="dayCard">
+      <div class="dayHeader">Tuesday</div>
+      <p>
+        <ul id="tueScheduleList"></ul>
+      </p>
+      <button class="addSessionButton">Add Session</button>
+    </div>
+
+    <div class="dayCard">
+      <div class="dayHeader">Wednesday</div>
+      <p>
+        <ul id="wedScheduleList"></ul>
+      </p>
+      <button class="addSessionButton">Add Session</button>
+    </div>
+
+    <div class="dayCard">
+      <div class="dayHeader">Thursday</div>
+      <p>
+        <ul id="thurScheduleList"></ul>
+      </p>
+      <button class="addSessionButton">Add Session</button>
+    </div>
+
+    <div class="dayCard">
+      <div class="dayHeader">Friday</div>
+      <p>
+        <ul id="friScheduleList"></ul>
+      </p>
+      <button class="addSessionButton">Add Session</button>
+    </div>
+
+    <div class="dayCard">
+      <div class="dayHeader">Saturday</div>
+      <p>
+        <ul id="satScheduleList"></ul>
+      </p>
+      <button class="addSessionButton">Add Session</button>
+    </div>
+
+    <div class="dayCard">
+      <div class="dayHeader">Sunday</div>
+      <p>
+        <ul id="sunScheduleList"></ul>
+      </p>
+      <button class="addSessionButton">Add Session</button>
+    </div>
+</div>
+
+
+<div class="homepageButtonRow">
+
+  <button class="homepageButton" id="scheduleTutorButton">Create <br/>Tutor <br/>Session</button>
+  <!--<button class="homepageButton" id="scheduleGroupButton" onclick="window.location.href ='scheduleGroup.html';">Schedule <br/>Group<br/> Session</button>
+  <button class="homepageButton" id="addEventButton">Add <br/>Event</button>-->
+
+</div>
+
+
+<button id="floatingButton" onclick="window.location.href ='https://learning.humboldt.edu/after-hours-tutoring';">Need After Hours Tutoring?</button>
+
+
+    <footer class="pageFooter">
+          <p>© 2024 StudyHub Team Hackathon Project</p>
+    </footer>
+
+</body>
+</html>

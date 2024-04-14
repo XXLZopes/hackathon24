@@ -38,3 +38,54 @@ div.signUp div
 {
     text-align: center;
 }
+
+div.coursesModal
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 0.5em solid #F2A900;
+    border-radius: 1em;
+    background-color: #FFC72C;
+    width: 35em;
+    padding-bottom: 0.5em;
+    margin: 25vh auto 25vh auto;
+    font-family: Helvetica, sans-serif;
+}
+
+div.coursesModal p
+{
+    margin: 2vh 8% 0em 10%;
+    width: 30%;
+}
+
+div.coursesModal input
+{
+    margin: 2vh 8% 0em 8%;
+    width: 32%;
+    height: 2em;
+}
+
+div.modalContent
+{
+    margin: 2vh 16% 0em 16%;
+}
+
+div.modalContent button
+{
+    padding: 1vh 0em;
+    background-color: #00856A;
+    border: 0.5em solid #00856A;
+    border-radius: 1em;
+    min-width: 7em;
+}
+
+@media screen and (max-width: 600)
+{
+    div.signUp, div.coursesModal
+    {
+        margin: 10%;
+        width: 80%;
+        height: 50vh;
+    }
+}
