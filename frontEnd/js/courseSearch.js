@@ -23,21 +23,31 @@ async function displayCourses() {
     element = element[0] + " " + element[1];
     courseButton.innerHTML = element;
   });
-  
 }
+const divWrapperArray = Array.from(divWrapperEl.children);
 
 searchEl.addEventListener("keyup", (event) => {
   const { value } = event.target;
 
   const searchQuery = value.toLowerCase();
 
-  for (let courseName of courses) {
-    let course = courseName.textContent.toLowerCase();
+  divWrapperArray.forEach((element) => {
+
+    if (element.innerText.substring(searchQuery)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+  })
+/*
+  for (let courseName of divWrapperArray) {
+    console.log(courseName)  
+    let course = courseName
 
     if (course.includes(searchQuery)) {
       courseName.style.display = "block";
     } else {
       courseName.style.display = "none";
     }
-  }
+  }*/
 });
