@@ -10,10 +10,10 @@ function displayCourses() {
   courses.array.forEach(element => {
     let courseDiv = document.createElement("div");
     courseDiv.classList.add("class=modalContent");
-    courseDiv.innerHTML = element;
     divWrapperEl.appendChild(courseDiv);
     let courseButton = document.createElement("button")
     courseDiv.appendChild(courseButton);
+    courseButton.innerHTML = element;
   });
 }
 
