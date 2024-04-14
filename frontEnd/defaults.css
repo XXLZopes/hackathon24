@@ -75,10 +75,10 @@ body
 #personalizedWelcome
 {
     display: flex; 
+    flex-direction: column; 
     justify-content: center;
+    align-items: center; 
     width: 33%;
-    align-items: center;
-    gap: 1em;
 }
 
 #personalizedWelcome a
