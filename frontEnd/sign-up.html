@@ -17,7 +17,7 @@
     </nav>
 
     <div class="signUp" id="divSignUp">
-        <p id="signUpTitle">New Account</p>
+        <h2 id="signUpTitle">New Account</h2>
         <div>
             <label for="fname">First Name:</label>
             <input type="text" name="fname" id="fname_input" required="required" />
@@ -31,8 +31,12 @@
             <input type="text" name="courses" id="coursesInput" required="required" />
         </div>
         <button id="submitButton">Create Account</button>
-        <p id="signUpFooter">Have an account? <a href="">Log in</a> instead!</p>
+        <p id="signUpFooter">Have an account? <a href="login.html">Log in</a> instead!</p>
     </div>
+
+    <footer class="pageFooter">
+        <p>© 2024 StudyHub Team Hackathon Project</p>
+    </footer>
 
     <div class="coursesModalCon" id="coursesModalCon">
         <div class="coursesModal" id="divCoursesModal">
@@ -41,11 +45,11 @@
                 <input type="text" id="searchInput" placeholder="Search"/>
             <button id="submitButtonCourses">Submit</button>
     </div>
+
+ 
 </body>
 
-<footer class="pageFooter">
-    <p>© 2024 StudyHub Team Hackathon Project</p>
-</footer>
+
 <script src="./js/courseSearch.js"></script>
 <script src="./js/loginRedirect.js"></script>
 <script src="./js/sign-up.js"></script>
