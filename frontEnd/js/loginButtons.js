@@ -11,6 +11,7 @@ function displaySubmit() {
     document.querySelector("#loginEmail").querySelector("#emailLabel").innerHTML = 'Enter Code:'
     document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('type','text');
     document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('id','codeInput');
+    document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('value','');
     document.querySelector("#loginEmail").querySelector("#sendCode").setAttribute('onclick','verifyEmail()');
   }
 }

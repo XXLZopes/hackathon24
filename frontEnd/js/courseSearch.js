@@ -1,10 +1,11 @@
 const searchEl = document.getElementById("searchInput");
 const divWrapperEl = document.getElementById("divCoursesModal");
 let courses;
+let course;
 
 async function displayCourses() {
   // This needs to be an array from the list of all courses
-  await fetch("http://localhost:3500/course/courseName").then((result) => {
+  await fetch("http://localhost:3500/course/courseName", {credentials: "include"}).then((result) => {
     return result.json().then((data)=>{
         data.splice(0,1);
         courses=data;
