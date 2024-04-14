@@ -20,7 +20,6 @@ async function displayCourses() {
     let fullName = firstName + " "  + lastName
     let email = user.email;
     let classList = user.classList;
-
     let username = email.split('@')[0];
 
 
@@ -35,46 +34,22 @@ async function displayCourses() {
     welcomeUserNameEl.innerText = firstName; 
 
     const userNameEl = document.querySelector('#profileDiv p span#userName');
-    console.log(userNameEl)
     userNameEl.innerText = username;
 
     const userFullNameEl = document.querySelector('#profileDiv p span#userFullName');
-    console.log(userFullNameEl)
     userFullNameEl.innerText = fullName;
 
     const userEmailEl = document.querySelector('#profileDiv p span#userEmail');
-    console.log(userEmailEl)
     userEmailEl.innerText = email;
 
+    const userCoursesList = document.querySelector('#profileDiv p ul#userCoursesList');
 
+    for (var i = 0; i < classList.length; i++){
+        var list = classList[i];
+        list = document.createElement('li');
+        list.innerText = classList[i];
+        document.getElementById('userCoursesList').appendChild(list);
+    }
 
-
-    
-    // const coursesDivEl = document.querySelector(`#coursesDiv`);
-    // user.classList.forEach((course) => {
-    //     console.log("course: ", course)
-    //     const courseCardEl = document.createElement(`div`);
-    //     const courseArray = course.split("_");
-    //     const p1El = document.createElement('p');
-    //     const p2El = document.createElement('p');
-    //     p1El.innerText = courseArray[0] + " " + courseArray[1];
-    //     let p2ElText= "";
-    //      courseArray.slice(2).forEach((element) => {
-    //         p2ElText += element + " ";
-    //     });
-    //     p2El.innerText = p2ElText;
-    //     courseCardEl.appendChild(p1El);
-    //     courseCardEl.appendChild(p2El);
-
-    //     courseCardEl.classList.add(`courseCard`);
-
-    //     coursesDivEl.appendChild(courseCardEl);
-    // });
-
-    // const addCourseButtonEl = document.createElement(`div`);
-    // addCourseButtonEl.classList.add(`addCourseButon`);
-
-    // coursesDivEl.appendChild(addCourseButtonEl);
-    
   }
   displayCourses();
