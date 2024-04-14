@@ -10,7 +10,14 @@ div.signUp
     width: 35em;
     padding-bottom: 0.5em;
     margin: 25vh auto 25vh auto;
-    font-family: Helvetica, sans-serif;
+
+}
+
+.navWrapper
+{
+    display: flex !important;
+    justify-content: center;
+
 }
 
 #signUpTitle
@@ -20,7 +27,6 @@ div.signUp
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    font: bold 1.5em helvetica, sans-serif;
 }
 
 div.signUp div

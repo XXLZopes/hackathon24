@@ -26,6 +26,9 @@ router.route(`/tutorSession/`)
     .patch(patchTutorSessions)
     .delete(deleteTutorSession)
 
+router.route(`/removeClass/`)
+    .patch(removeUserClass)
+
 router.route(`/id/:userId`)
     .get(getUserById)
 
