@@ -29,7 +29,7 @@ label
     color: black;
 }
 
-div#loginEmail
+div#loginEmail 
 {
     display: default;
     margin-left: auto;
@@ -43,7 +43,7 @@ div#loginEmail
     margin-top: 1vh;
 }
 
-#loginFooter
+#loginFooter, #loginBack
 {
     margin: auto;
     padding-top: 1vh;
@@ -64,4 +64,14 @@ div#loginEmail
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+@media screen and (max-width: 600)
+{
+    div.login
+    {
+        margin: 10%;
+        width: 80%;
+        height: 50vh;
+    }
 }

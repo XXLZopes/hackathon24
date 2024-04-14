@@ -1,0 +1,82 @@
+.addSessionButton
+{
+    width: 100%;
+    background-color: #FFC72C;
+    border: none; 
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.dayCardRow
+{
+    display: flex; 
+    justify-content: center; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 1em; 
+    margin-top: 4em; 
+    margin-bottom: 4em; 
+}
+
+.dayCard
+{
+    background-color: #F5F3E7; 
+    border-radius: 1em; 
+    width: 10em; 
+}
+
+.dayHeader
+{
+    background-color: #FFC72C; 
+    padding: 0.5em; 
+    border-top-left-radius: 1em; 
+    border-top-right-radius: 1em; 
+    text-align: center; 
+}
+
+#weekHeader
+{
+    margin-top: 2em; 
+    background-color: #004C46; 
+    width: 70%; 
+    color: #F5F3E7; 
+    border-radius: 3em;  
+    padding-top: 0.1em; 
+    padding-bottom: 0.1em; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center; 
+}
+
+.homepageButtonRow
+{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    gap: 3em; 
+    max-width: 100%;
+}
+
+.homepageButton
+{
+    background-color: #00856A; 
+    color: #F5F3E7;
+    font-size: 100%; 
+    border: none; 
+    border-radius: 2em; 
+    width: 25%; 
+    padding: 0.6em;
+}
+
+#floatingButton
+{
+    border-radius: 3em; 
+    background-color: #004C46;
+    color: #F5F3E7;
+    border: none; 
+    padding: 0.6em; 
+    position: fixed; 
+    right: 20px; 
+    bottom: 70px; 
+
+}

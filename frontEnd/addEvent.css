@@ -1,73 +1,10 @@
-*
-{
-    box-sizing: border-box; 
-}
-
-body
-{
-    background-color: #98B8AD; 
-    overflow: scroll; 
-} 
-
-.navWrapper
+.addEventButton
 {
     width: 100%;
-    height: 4em; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #FFC72C; 
-    
-}
-
-.navWrapper ul
-{
-    display: flex; 
-    flex-direction: row; 
-    gap: 0.5em; 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute; 
-    top: 30%;
-    
-}
-
-.navWrapper ul a
-{
-    text-decoration: none; 
-    color: black; 
-}
-
-.navWrapper h1
-{
-    position: absolute; 
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    
-}
-
-.navWrapper h3
-{
-    position: absolute; 
-    top: 20%;
-    left: 90%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-}
-
-.pageFooter
-{
-    background-color: #FFC72C; 
-    text-align: center; 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    background-color: #FFC72C;
+    border: none; 
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 .dayCardRow
@@ -99,7 +36,7 @@ body
 
 #weekHeader
 {
-    margin-top: 4em; 
+    margin-top: 2em; 
     background-color: #004C46; 
     width: 70%; 
     color: #F5F3E7; 

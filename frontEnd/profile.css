@@ -1,0 +1,67 @@
+.profileInfoDiv
+{
+    margin-top: 4em;
+    background-color: #F5F3E7;
+    border-radius: 2em; 
+    display: flex; 
+    flex-direction: row;
+    
+}
+
+.leftProfile
+{
+    background-color: #FFC72C; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    width: 30%; 
+    border-top-left-radius: 2em; 
+    border-bottom-left-radius: 2em; 
+    padding: 2em;
+
+}
+
+#hi
+{
+    text-align: center; 
+}
+
+img
+{
+    width: 90%; 
+    height: 90%; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.rightProfile
+{
+    margin-left: 1em; 
+}
+
+button
+{
+    background-color: #FFC72C; 
+    border: none; 
+    border-radius: 1em; 
+    padding: 1em; 
+}
+
+.rightButton
+{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    max-width: 100%; 
+    gap: 0.7em; 
+}
+
+@media screen and (max-width: 450)
+{
+
+    img 
+    {
+        height: auto;
+    }
+}

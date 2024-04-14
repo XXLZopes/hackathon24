@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css"
+          href="defaults.css"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="profile.css"/>
+
+    <title>StudyHub Home</title>
+</head>
+<body>
+
+    <nav>
+      <div class="navWrapper">
+        <ul id="navList">
+          <li><a href="studentHomepage.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <h1>StudyHub</h1>
+
+        <h3 id="welcomeName">Welcome <span id="welcomeUserName"></span></h3>
+      </div>
+    </nav>
+
+    <div class="profileInfoDiv">
+
+        <div class="leftProfile">
+            <img src="images/pfp.png" alt="profile picture"/>
+            <h2 id="hi">Hi, <span id="hiUserName"></span></h2>
+        </div>
+
+        <div class="rightProfile">
+            <p>Username:<span id="userName"></span></p>
+            <p>Name:<span id="userFullName"></span></p>
+            <p>Email:<span id="userEmail"></span></p>
+            <p>Major:<span id="userMajor"></span></p>
+            <p>Courses:<ul id="userCoursesList"></ul></p>
+
+            <div class="rightButton">
+                <button>Add A Course</button>
+                <button>Remove A Course</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer class="pageFooter">
+          <p>© 2024 StudyHub Team Hackathon Project</p>
+    </footer>
+
+</body>
+</html>
