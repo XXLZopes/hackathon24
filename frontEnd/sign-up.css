@@ -41,7 +41,7 @@ div.signUp div
 
 div.coursesModal
 {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border: 0.5em solid #F2A900;
