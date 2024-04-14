@@ -8,18 +8,25 @@
     <title>Sign Up | StudyHub</title>
 </head>
 <body onload="displayCourses()">
-    <div class="header">
-        <nav>
-            <div class="navWrapper">
-              <ul id="navList">
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-              </ul>
-      
-              <h1>StudyHub</h1>
-            </div>
-          </nav>
-    </div>
+    <nav>
+        <div class="navWrapper">
+          <div id="burger">
+          <ul id="navList">
+            <li><a href="studentHomepage.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div id="logo">
+          <h1>StudyHub</h1>
+        </div>
+    
+        <div id="personalizedWelcome">
+          <h3 id="welcomeHeader">Welcome, <span id="welcomeUserName"></span> <br/>
+          </h3>
+        </div>
+      </div>
+    </nav>
 
     <div class="signUp" id="divSignUp">
         <p id="signUpTitle">New Account</p>
