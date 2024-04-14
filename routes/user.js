@@ -5,6 +5,7 @@ const {
     loginOrRegister,
     getLoggedInUser,
     updateLoggedInUser,
+    getAllUsernames
     
 } = require(`../controllers/user-controller`);
 
@@ -14,6 +15,9 @@ router.route(`/`)
 
 router.route(`/login/`)
     .post(loginOrRegister)
+
+router.route(`/usernames/`)
+    .get(getAllUsernames)
     
 
 module.exports = router;
