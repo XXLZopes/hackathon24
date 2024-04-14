@@ -5,8 +5,10 @@ body
 
 .imagesRow
 {
+    max-width: 100%;
     display: flex; 
     flex-direction: row; 
+    gap: 0.7em;
     
     margin-bottom: 5em; 
 }
@@ -26,14 +28,9 @@ img
     box-shadow: 4px 5px 4px black;
 }
 
-img:hover
-{
-    transition: .3s ease-in-out;
-}
-
 #meetHeader
 {
-    width: 50%; 
+    width: 45%; 
     margin-left: auto;
     margin-right: auto; 
     text-align: center;
@@ -47,7 +44,11 @@ img:hover
 
 h2
 {
+    margin-top: 0.2em;
     text-align: center; 
+    background-color:#004C46;
+    color: #F5F3E7;
+    border-radius: 1em; 
 }
 
 @media screen and (max-width: 600px)
