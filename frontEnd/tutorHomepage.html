@@ -98,75 +98,37 @@
         <button class="addSessionButton">Add Session</button>
       </div>
   </div>
-
-  <div class="sessionModal" id="divSessionModal">
-    <p>Edit Session</p>
-    <div class="dayInput">
-      <label for="dotw">Select Day:</label>
-      <select name="dotw" id="daySelection">
-        <option value="monday">Monday</option>
-        <option value="tuesday">Tuesday</option>
-        <option value="wednesday">Wednesday</option>
-        <option value="thursday">Thursday</option>
-        <option value="friday">Friday</option>
-        <option value="saturday">Saturday</option>
-        <option value="sunday">Sunday</option>
-      </select>
+  
+  <div class="sessionModalCon" id="sessionModalCon">
+    <div class="sessionModal" id="divSessionModal">
+      <div class="closeButton" id="closeSessionModal">x</div>
+      <p>Edit Session</p>
+      <div class="dayInput">
+        <label for="dotw">Select Day:</label>
+        <select name="dotw" id="daySelection">
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+        </select>
+      </div>
+      <div class="timeInput">
+        <label for="time">Select Time Period:</label>
+        <input type="time" id="startTime"/>
+        <label for="time">until</label>
+        <input type="time" id="endTime"/>
+      </div>
+      <div>
+        <label for="course">Select Course:</label>
+        <select name="course" id="courseSelection">
+          <!-- Populate with options for each course in user's tutor table -->
+          <option value="CS 111">CS 111</option>
+        </select>
+      </div>
     </div>
-    <div class="timeInput">
-      <label for="time">Select Time Period:</label>
-      <input type="time" id="startTime"/>
-      <label for="time">until</label>
-      <input type="time" id="endTime"/>
-    </div>
-    <div>
-      <label for="course">Select Course:</label>
-      <select name="course" id="courseSelection">
-        <!-- Populate with options for each course in user's tutor table -->
-        <option value="CS 111">CS 111</option>
-      </select>
-    </div>
-<<<<<<< Updated upstream
-
-    <div class="dayCard">
-      <div class="dayHeader">Thursday</div>
-      <p>
-        <ul id="thurScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
-    </div>
-
-    <div class="dayCard">
-      <div class="dayHeader">Friday</div>
-      <p>
-        <ul id="friScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
-    </div>
-
-    <div class="dayCard">
-      <div class="dayHeader">Saturday</div>
-      <p>
-        <ul id="satScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
-    </div>
-
-    <div class="dayCard">
-      <div class="dayHeader">Sunday</div>
-      <p>
-        <ul id="sunScheduleList"></ul>
-      </p>
-      <button class="addSessionButton">Add Session</button>
-    </div>
-</div>
-
-
-<div class="homepageButtonRow">
-=======
-  </div>
->>>>>>> Stashed changes
-
 </div>
 
 

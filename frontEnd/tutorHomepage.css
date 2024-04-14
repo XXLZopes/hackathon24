@@ -85,9 +85,25 @@
     border-radius: 1em; 
 }
 
+.sessionModalCon
+{
+    display: none;
+    padding: 2rem;
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#closeSessionModal
+{
+    cursor: pointer;
+}
+
 .sessionModal
 {
-    /* Default display: none, change to display: flex onclick of AddSession button */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -95,7 +111,7 @@
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    width: 35em;
+    max-width: 80%;
     padding-bottom: 0.5em;
     padding-left: 1em;
     margin: 25vh auto 25vh auto;
