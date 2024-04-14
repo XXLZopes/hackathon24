@@ -17,13 +17,21 @@ const courseController = {
     },
     getAllCourses(req, res) {
         Course.find({})
-        .distinct("courseName")
         .select("-__v")
         .then((courses) => res.status(200).json(courses))
         .catch((err) => {
             console.error("Something went wrong when trying to retrieve all the courses from the database.");
             res.status(500).json(err);
         });
+    },
+    getUniqueCourseNames(req, res) {
+        Course.find({})
+        .distinct("courseName")
+        .then((courses) => res.status(200).json(courses))
+        .catch((err) => {
+            console.error(`Something went wrong when getting all ths courses!`);
+            res.status(500).json(err)
+        })
     },
     getCourseByCN(req,res) {
         const courseCN = req.params.courseCN
@@ -32,6 +40,17 @@ const courseController = {
         .then((courses) => res.status(200).json(courses))
         .catch((err) => {
             console.error(`Something went wrong when trying to retrieve course with CN ${courseCN}.`);
+            res.status(500).json(err);
+        });
+    },
+    getCourseByCourseName(req,res) {
+        const courseName = req.params.courseName
+        Course.find({courseName: courseName})
+        .select("-__v")
+        .then((courses) => {
+            res.status(200).json(courses)})
+        .catch((err) => {
+            console.error(`Something went wrong when trying to retrieve course with course name: ${courseName}.`);
             res.status(500).json(err);
         });
     },
@@ -57,7 +76,6 @@ const courseController = {
     getCoursesBySubject(req,res) {
         const subject = req.params.courseSubject
         Course.find({subject: subject})
-        .distinct("courseName")
         .select("-__v")
         .then((courses) => res.status(200).json(courses))
         .catch((err) => {

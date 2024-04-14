@@ -6,12 +6,20 @@ const {
     getAllCourses,
     getCourseByCN,
     deleteCourseByCN,
-    getCoursesBySubject
+    getCoursesBySubject,
+    getUniqueCourseNames,
+    getCourseByCourseName
 } = require(`../controllers/course-controller`);
 
 router.route(`/`)
     .post(createCourse)
     .get(getAllCourses)
+
+router.route(`/courseName/:courseName`)
+    .get(getCourseByCourseName)
+    
+router.route(`/courseName`)
+    .get(getUniqueCourseNames)
 
 router.route(`/courseCN/:courseCN`)
     .get(getCourseByCN)

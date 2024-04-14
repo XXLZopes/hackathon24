@@ -35,7 +35,9 @@ for subject, link in links:
                         "start_time": start_time,
                         "end_time": end_time
                     })
-                
+
+            className = className.replace("  ", "_");
+            className = className.replace(" ", "_");    
 
             
             if className.lower() != "laboratory" and className.lower() != "activity" and cn and className:
@@ -43,7 +45,7 @@ for subject, link in links:
                     'CN': cn,
                     'subject': subject,
                     'courseName': className,
-                    'courseTime': time
+                    'courseTimes': time
                 })
 
     # Check if the current page is Zoology, then break out of the loop
