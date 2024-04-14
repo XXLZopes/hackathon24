@@ -39,6 +39,22 @@ div.signUp div
     text-align: center;
 }
 
+.coursesModalCon
+{
+    display: none;
+    padding: 2rem;
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#closeCoursesModal {
+    cursor: pointer;
+}
+
 div.coursesModal
 {
     display: flex;
@@ -47,22 +63,25 @@ div.coursesModal
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    width: 35em;
+    max-width: 80%;
     padding-bottom: 0.5em;
-    margin: 25vh auto 25vh auto;
+    margin: auto;
     font-family: Helvetica, sans-serif;
+    overflow-y: scroll;
+    max-height: 90%;
+    
 }
 
 div.coursesModal p
 {
-    margin: 2vh 8% 0em 10%;
+    margin: 2vh 0% 0em 10%;
     width: 30%;
 }
 
 div.coursesModal input
 {
-    margin: 2vh 8% 0em 8%;
-    width: 32%;
+    margin: 2vh 8% 0em 0%;
+    width: 24%;
     height: 2em;
 }
 
@@ -80,12 +99,7 @@ div.modalContent button
     min-width: 7em;
 }
 
-@media screen and (max-width: 600)
+#submitButton
 {
-    div.signUp, div.coursesModal
-    {
-        margin: 10%;
-        width: 80%;
-        height: 50vh;
-    }
+    width: 25%;
 }

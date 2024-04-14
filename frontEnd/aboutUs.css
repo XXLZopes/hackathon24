@@ -8,7 +8,7 @@ body
     display: flex; 
     flex-direction: row; 
     
-    margin-bottom: 2em; 
+    margin-bottom: 5em; 
 }
 
 .person
@@ -25,9 +25,18 @@ img
     border-radius: 50%; 
 }
 
-h1
+#meetHeader
 {
-    text-align: center; 
+    width: 50%; 
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+    background-color: #004C46;
+    color: #F5F3E7; 
+    padding: 0.5em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 h2
