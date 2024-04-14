@@ -1,4 +1,4 @@
-const emailEl = document.querySelector("#emailInput");
+let emailEl = document.querySelector("#emailInput");
 let url = "http://localhost:3500";
 let email;
 
@@ -9,10 +9,11 @@ function displaySubmit() {
     return;
   } else {
     document.querySelector("#loginEmail").querySelector("#emailLabel").innerHTML = 'Enter Code:'
+    document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('type','number');
     document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('type','text');
     document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('id','codeInput');
-    document.querySelector("#loginEmail").querySelector("#emailInput").setAttribute('value','');
     document.querySelector("#loginEmail").querySelector("#sendCode").setAttribute('onclick','verifyEmail()');
+    emailEl = document.querySelector("#emailInput");
   }
 }
 
@@ -63,8 +64,6 @@ async function verifyEmail() {
   const isVerified = await fetch(url + "/verify/verify-code/", requestData)
     .then((response) => {
       // console.log(response)
-      console.log("Email: " + email);
-      console.log("Code: " + code);
       return response.json();
     })
     .then((data) => {
