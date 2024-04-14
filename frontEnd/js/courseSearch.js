@@ -1,8 +1,8 @@
 const searchEl = document.getElementById("searchInput");
-let divWrapperEl = document.getElementById("wrapper");
+let divWrapperEl = document.getElementById("divCoursesModal");
 let courses;
 let course;
-let divWrapperArray =[];
+let divWrapperArray = [];
 
 async function displayCourses() {
   // This needs to be an array from the list of all courses
@@ -22,30 +22,41 @@ async function displayCourses() {
         divWrapperEl.appendChild(courseDiv);
         let courseButton = document.createElement("button");
         courseDiv.appendChild(courseButton);
+        element = element.replaceAll("__", " ");
         element = element.replaceAll("_", " ");
-        element = element.split(" ");
-        element = element[0] + " " + element[1];
+        if(element.includes(" ")){
+            element = element.split(" ");
+            element = element[0] + " " + element[1];
+        }
         courseButton.innerHTML = element;
-        divWrapperArray.push("0");
       });
+    })
+    .then((_) => {
+      Array.from(divWrapperEl.children).forEach((element) => {
+        divWrapperArray.push(element);
+      });
+      divWrapperArray.splice(0, 2);
+      startSearchListener();
     });
 }
-//divWrapperArray.splice(0, 2);
-//console.log(divWrapperArray.splice(0, 2));
-divWrapperArray[0] = 2;
-divWrapperArray[3] = "3";
-console.log(divWrapperArray);
 
-searchEl.addEventListener("keyup", (event) => {
-  const { value } = event.target;
+function startSearchListener() {
+  searchEl.addEventListener("keyup", (event) => {
+    const { value } = event.target;
 
-  const searchQuery = value.toLowerCase();
+    const searchQuery = value.toLowerCase();
 
-  divWrapperArray.forEach((element) => {
-    if (element.innerText.substring(searchQuery)) {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
-    }
+    divWrapperArray.forEach((element) => {
+      if (
+        element
+          .querySelector("button")
+          .innerText.toLowerCase()
+          .includes(searchQuery)
+      ) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
   });
-});
+}
