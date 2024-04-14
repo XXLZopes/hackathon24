@@ -29,11 +29,13 @@ const userRouter = require(`./routes/user`);
 const verifyRouter = require(`./routes/verify`);
 const courseRouter = require('./routes/course');
 const subjectRouter = require(`./routes/subject`);
+const tutorRouter = require(`./routes/tutor`);
 
 app.use(`/user`, userRouter);
 app.use(`/verify`, verifyRouter);
 app.use('/course',courseRouter);
 app.use(`/subject`, subjectRouter);
+app.use(`/tutor`,tutorRouter)
 
 mongoose
     .connect(
