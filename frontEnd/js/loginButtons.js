@@ -98,5 +98,8 @@ const sendCodeEl = document.querySelector("#sendCode");
 sendCodeEl.addEventListener("click", () => {
   if (email) {
     sendEmail();
+    sendCodeEl
+    var new_element = sendCodeEl.cloneNode(true);
+    sendCodeEl.parentNode.replaceChild(new_element, sendCodeEl);
   }
 });
