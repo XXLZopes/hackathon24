@@ -80,3 +80,42 @@
     bottom: 70px; 
 
 }
+
+.eventModal
+{
+    /* Default display: none, change to display: flex onclick of AddEvent button */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5em solid #F2A900;
+    border-radius: 1em;
+    background-color: #FFC72C;
+    width: 35em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    margin: 25vh auto 25vh auto;
+    font-family: Helvetica, sans-serif;
+}
+
+.eventModal div
+{
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+
+.timeInput
+{
+    display: flex;
+    align-content: center;
+}
+
+.timeInput input
+{
+    height: 2em;
+}
+
+.timeInput p
+{
+    bottom: -30%;
+}
