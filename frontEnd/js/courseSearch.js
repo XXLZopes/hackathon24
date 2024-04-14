@@ -69,6 +69,7 @@ async function postSelectedCourses() {
       }
   }
   await updateUserCourses();
+  document.getElementById("coursesModalCon").style.display = "none";
   return results;
 }
 
