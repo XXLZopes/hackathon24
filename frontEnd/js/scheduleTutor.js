@@ -62,7 +62,7 @@ async function displayCourses() {
 const findTutorsButton = document.getElementById("findTutorButton");
 findTutorsButton.addEventListener('click', () => {
   const data = {info: coursesToRequest}
-  const w = window.location.replaec("tutorSessionResults.html")
+  const w = window.open("tutorSessionResults.html")
   w.data = data;
 
 })

@@ -7,6 +7,7 @@
     <link href="account.css" type="text/css" rel="stylesheet" />
     <link href="sign-up.css" type="text/css" rel="stylesheet" />
     <title>Sign Up | StudyHub</title>
+    <script defer src="./js/forceLogin.js"></script>
 </head>
 <body onload="displayCourses()">
     <nav>
@@ -31,7 +32,7 @@
             <label for="courses">Courses:</label>
             <input type="text" name="courses" id="coursesInput" required="required" />
         </div>
-        <button id="submitButton" onclick="window.location('profile.html')">Save</button>
+        <button id="submitButton" onclick="window.location.replaces('profile.html')">Save</button>
     </div>
 
     <div class="coursesModalCon" id="coursesModalCon">
