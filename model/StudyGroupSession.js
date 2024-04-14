@@ -1,7 +1,8 @@
-const { Schema, model, Types } = require(`mongoose`);
+const { Schema, model } = require('mongoose');
+
 const Time = require("./Time");
 
-const StudyGroupSessionSchema = new Schema({
+const studygroupSessionSchema = new Schema({
     course_id: {
         type: Number,
         unique: true,
@@ -19,5 +20,5 @@ const StudyGroupSessionSchema = new Schema({
     }
 });
 
-const StudyGroupSession = mongoose.model('StudyGroupSession', StudyGroupSessionSchema);
+const StudyGroupSession = model('StudyGroupSession', studygroupSessionSchema);
 module.exports = StudyGroupSession;
