@@ -6,7 +6,7 @@ const {
     getAllCourses,
     getCourseByCN,
     deleteCourseByCN,
-    // updateCourseByCN
+    getCoursesBySubject
 } = require(`../controllers/course-controller`);
 
 router.route(`/`)
@@ -16,6 +16,8 @@ router.route(`/`)
 router.route(`/courseCN/:courseCN`)
     .get(getCourseByCN)
     .delete(deleteCourseByCN)
-    // .put(updateCourseByCN)
+
+router.route(`/subject/:courseSubject`)
+    .get(getCoursesBySubject)
 
 module.exports = router;
