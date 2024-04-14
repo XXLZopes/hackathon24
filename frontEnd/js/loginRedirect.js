@@ -21,11 +21,12 @@ function getForumData() {
         dataToUpdate.firstName = fname;
     }
     if (lname != "") {
-        dataToUpdate.firstName = lname;
+        dataToUpdate.lastName = lname;
     }
     if (courseList != "") {
-        dataToUpdate.firstName = courseList;
+        dataToUpdate.classList = courseList;
     }
+
     return JSON.stringify(dataToUpdate);
 }
 
@@ -53,6 +54,7 @@ async function updateUser() {
         return response.json();
     })
     .then(userData => {
+    window.window.location.href = "./studentHomepage.html";
         console.log("User updated successfully!", userData);
     })
     .catch(error => {

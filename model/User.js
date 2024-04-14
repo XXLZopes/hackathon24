@@ -17,7 +17,11 @@ const UserSchema = new Schema({
     classList: {
         type: [String],
         default: []
-    }, 
+    },
+    sugnedUpTutorSessions: {
+        type: [String],
+        default: []
+    },
     tutorScore: {
         type: Number,
         default: null
