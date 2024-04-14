@@ -52,16 +52,16 @@ body
 
 #studentImage
 {
-    width: 50%; 
-    height: 50%; 
+    width: 25%; 
+    height: 25%; 
 }
 
 #tutorImage
 {
-    width: 50%; 
-    height: 50%; 
+    width: 25%; 
+    height: 25%; 
     position: relative; 
-    left: -60px; 
+    left: -10%; 
     
 }
 
