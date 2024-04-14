@@ -17,8 +17,8 @@ const courseController = {
     },
     getAllCourses(req, res) {
         Course.find({})
-        .select("-__v")
         .distinct("courseName")
+        .select("-__v")
         .then((courses) => res.status(200).json(courses))
         .catch((err) => {
             console.error("Something went wrong when trying to retrieve all the courses from the database.");
@@ -57,8 +57,8 @@ const courseController = {
     getCoursesBySubject(req,res) {
         const subject = req.params.courseSubject
         Course.find({subject: subject})
-        .select("-__v")
         .distinct("courseName")
+        .select("-__v")
         .then((courses) => res.status(200).json(courses))
         .catch((err) => {
             console.error(`Something went wrong when trying to retrieve course with CN ${courseCN}.`);
