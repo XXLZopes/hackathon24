@@ -45,7 +45,7 @@ input[type="text"]
     margin-top: 1em; 
     margin-bottom: 1em;
     background-color: #00856A; 
-    width: 80%; 
+    width: 90%; 
     color: #F5F3E7; 
     border-radius: 3em;  
     padding: 0.4em; 
@@ -68,7 +68,7 @@ input[type="text"]
 {
     background-color: #00856A; 
     color: #F5F3E7;
-    font-size: 100%; 
+    font-size: 150%; 
     border: none; 
     border-radius: 2em; 
     width: 25%; 
