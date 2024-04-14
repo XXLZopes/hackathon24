@@ -17,7 +17,7 @@ async function displayCourses() {
     
     const coursesDivEl = document.querySelector(`#coursesDiv`);
     user.classList.forEach((course) => {
-        console.log("course: ", course)
+        // console.log("course: ", course)
         let courseCardEl = document.createElement(`button`);
         courseCardEl.setAttribute('onclick', 'addToArray(this.innerText)')
         const courseArray = course.split("_");

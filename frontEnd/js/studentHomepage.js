@@ -1,15 +1,16 @@
+
+    
 console.log('help')
 
 async function getTutorSession(tutorSessionId) {
-
   const requestData = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
   };
+  console.log("tID: ", tutorSessionId)
   return await fetch("http://localhost:3500/tutor/tutorSessionId/" + tutorSessionId, requestData)
   .then((result) => {
-    console.log("asdasdas", result.json())
     return result.json();
   });
 }
@@ -57,14 +58,17 @@ async function displayCourses() {
   // console.log(userData.signedUpTutorSessions);
 
   tutorSessions.forEach(async tutorSessionId => {
+    console.log(tutorSessionId);
     const session = await getTutorSession(tutorSessionId);
-    console.log("id: ", session.course);
-    let courseName = await getCourseName(session.course);
+    const courseId = session.courseId;
+    const tutorId = session.tutorId
+    console.log("id: ", session);
+    let courseName = await getCourseName(courseId);
 
-    const tutorInfo = await getTutor(session.tutorId);
+    // const tutorInfo = await getTutor(tutorId);
 
-    console.log(tutorInfo.firstName)
-    console.log(tutorInfo.lastName)
+    // console.log(tutorInfo.firstName)
+    // console.log(tutorInfo.lastName)
 
     // console.log(session);
     // const tutorInfo = getTutor()

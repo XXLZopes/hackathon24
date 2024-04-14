@@ -27,20 +27,24 @@ const tutorController = {
     },
 
     getTutorSessionById(req, res) {
-        const tutorSessionId = req.params.tutorSessionId
-        TutorSession.find({_id: tutorSessionId})
-        .select("-__v")
+        const tutorSessionId = req.params.tutorSessionId;
+        // Using findOne instead of find to ensure only one document is returned
+        TutorSession.findOne({_id: tutorSessionId})
+        .select("-__v") // Excluding the __v field from the result
         .then((tutorSession) => {
-            console.log(tutorSession);
             if (!tutorSession) {
-                return res.status(404).json({message: "No tutor with that id found."});
+                // Tutor session not found, send a 404 response
+                return res.status(404).json({ message: "No tutor session with that id found." });
             }
+            // Tutor session found, send a 200 response with the session data
             return res.status(200).json(tutorSession);
-        }).catch((err)=> {
+        }).catch((err) => {
+            // Error handling, log the error and send a 500 response
             console.error("Something went wrong", err);
             return res.status(500).json(err);
-        })
+        });
     },
+    
 
     getTutorSessionByTutor(req,res) {
         //todo this wont work rn, if you want to test change it to params.tutorID

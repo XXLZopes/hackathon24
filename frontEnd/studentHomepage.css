@@ -89,8 +89,7 @@
     width: 70%; 
     color: #F5F3E7; 
     border-radius: 3em;  
-    padding-top: 0.1em; 
-    padding-bottom: 0.1em; 
+    padding: .7rem;
     margin-left: auto; 
     margin-right: auto; 
     text-align: center; 
