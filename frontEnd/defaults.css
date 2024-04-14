@@ -138,11 +138,12 @@ body
 {
     background-color: #FFC72C; 
     text-align: center; 
-    position: fixed;
+    position: block;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 10vh; 
+    margin-top: 15vh;
 }
 
 button:hover
