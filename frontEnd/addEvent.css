@@ -89,6 +89,7 @@
 
 .eventModalCon
 {
+    margin: 0, auto;
     display: none;
     padding: 2rem;
     margin:0;
@@ -101,6 +102,8 @@
 
 #closeEventModal {
     cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .eventModal
@@ -112,11 +115,12 @@
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    max-width: 80%;
+    max-width: 60%;
     padding-bottom: 0.5em;
     padding-left: 1em;
     margin: 25vh auto 25vh auto;
     font-family: Helvetica, sans-serif;
+    text-align: center;
 }
 
 .eventModal div
@@ -129,6 +133,8 @@
 {
     display: flex;
     align-content: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .timeInput input
@@ -143,5 +149,14 @@
 
 #submitButton
 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0, auto;
     width: 25%;
+}
+
+#submitDiv {
+    display: flex;
+    justify-content: center;
 }
