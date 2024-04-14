@@ -2,12 +2,12 @@ const { Schema, model } = require(`mongoose`);
 const Time = require("./Time");
 
 const tutorSessionSchema = new Schema({
-    tutor: {
+    tutorId: {
         type: Number,
         required: true
     },
 
-    course: {
+    courseId: {
         type: Number,
         required: true
     },

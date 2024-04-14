@@ -5,13 +5,17 @@ const {
     loginOrRegister,
     getLoggedInUser,
     updateLoggedInUser,
-    getAllUsernames
+    getAllUsernames,
+    getUserById
     
 } = require(`../controllers/user-controller`);
 
 router.route(`/`)
     .get(getLoggedInUser)
     .put(updateLoggedInUser)
+
+router.route(`/id/:userId`)
+    .get(getUserById)
 
 router.route(`/login/`)
     .post(loginOrRegister)
