@@ -1,17 +1,19 @@
 const searchEl = document.getElementById("searchInput");
-const divWrapperEl = document.getElementById("divCoursesModal")
+const divWrapperEl = document.getElementById("divCoursesModal");
 let courses;
 
-function displayCourses() {
+async function displayCourses() {
   // This needs to be an array from the list of all courses
   fetch("http://localhost:3500/course/courseName").then((result) => {
+    console.log(result);
     courses = result.parse();
+    
   });
-  courses.array.forEach(element => {
+  courses.forEach((element) => {
     let courseDiv = document.createElement("div");
     courseDiv.classList.add("class=modalContent");
     divWrapperEl.appendChild(courseDiv);
-    let courseButton = document.createElement("button")
+    let courseButton = document.createElement("button");
     courseDiv.appendChild(courseButton);
     courseButton.innerHTML = element;
   });
