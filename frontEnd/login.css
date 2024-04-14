@@ -13,6 +13,12 @@ div.login
     font-family: Helvetica, sans-serif;
 }
 
+.navWrapper
+{
+    display: flex; 
+    justify-content: center; 
+}
+
 #loginTitle
 {
     display: block;
