@@ -17,7 +17,10 @@ async function displayCourses() {
     divWrapperEl.appendChild(courseDiv);
     let courseButton = document.createElement("button");
     courseDiv.appendChild(courseButton);
-    courseButton.innerHTML = element.replaceAll("_", " ").split("");
+    element = element.replaceAll("_", " ");
+    element = element.split(" ");
+    element = element[0] + " " + element[1];
+    courseButton.innerHTML = element;
   });
   
 }
