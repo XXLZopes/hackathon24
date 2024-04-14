@@ -1,4 +1,4 @@
-div.login
+.login
 {
     display: flex;
     flex-wrap: nowrap;
@@ -10,7 +10,6 @@ div.login
     width: 35em;
     padding-bottom: 0.5em;
     margin: 25vh auto 25vh auto;
-    font-family: Helvetica, sans-serif;
 }
 
 .navWrapper
@@ -26,7 +25,6 @@ div.login
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    font: bold 2em helvetica, sans-serif;
 }
 
 label
@@ -38,15 +36,23 @@ label
 div#loginEmail 
 {
     display: default;
+    width: 75%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 #sendCode
 {
-    width: 10%;
+    width: 20%;
+    height: 20%; 
     margin: auto;
     margin-top: 1vh;
+    background-color: #00856A;
+    border: 0.2em solid #004C46; 
+    color: #F5F3E7; 
+    border-radius: 1em; 
+    font-size: 110%;
 }
 
 #loginFooter, #loginBack
