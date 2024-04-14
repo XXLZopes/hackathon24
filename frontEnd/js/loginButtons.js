@@ -83,7 +83,11 @@ async function verifyEmail() {
       })
       .then((data) => {
         console.log("data.verified: ", data);
+<<<<<<< Updated upstream
+        window.location.href = "./sign-up.html";
+=======
         window.location.href = "./studentHomepage.html";
+>>>>>>> Stashed changes
         return data.verified;
       })
       .catch((error) => {
