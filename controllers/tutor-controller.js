@@ -5,12 +5,15 @@ const { ObjectId } = require(`mongoose`);
 const tutorController = {
   createTutorSession({ body }, res) {
     const courseId = body.courseId;
+    console.log("cn", courseId);
 
-    Course.find({ _id: courseId })
+    Course.findById({ _id: courseId })
       .then((course) => {
+        console.log("course", course);
         return course.courseName;
       })
       .then((courseName) => {
+        // console.log(courseName);
         body.courseName = courseName;
         TutorSession.create(body)
           .then((newTutorSession) => {
