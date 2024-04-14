@@ -81,6 +81,11 @@ body
     height: 5%; 
 }
 
+button
+{
+    cursor: pointer;
+}
+
 .pageFooter p
 {
     text-align: center; 
