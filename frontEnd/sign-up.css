@@ -55,6 +55,11 @@ div.signUp div
     cursor: pointer;
 }
 
+.selected {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
 div.coursesModal
 {
     display: flex;
@@ -99,7 +104,7 @@ div.modalContent button
     min-width: 7em;
 }
 
-#submitButton
+#submitButtonCourses
 {
     width: 25%;
 }
