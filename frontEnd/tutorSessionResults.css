@@ -47,4 +47,37 @@
     font-size: 1.2rem;
     padding: .5rem;
     border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.becomeATutorButton {
+    margin-top: 1rem;
+    background-color: #004C46;
+    width: fit-content;
+    color: white;
+    padding: .5rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    cursor: pointer;
+    border: white 3px outset
+    
+}
+.becomeATutorButton:hover {
+    scale: 1.05;
+    transition: .1s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .45);
+}
+
+.timeButton:hover {
+    cursor: pointer;
+    background-color: #004C46;
+    color: white;
+    transition: .1s;
+}
+
+.timeButton {
+    width: 100%;
+    text-align: center;
 }

@@ -39,6 +39,25 @@ async function getTutor(userId) {
     return result.json();
   });
 }
+// tutorSession
+async function deleteTutorSession(tutorSessionId) {
+  const requestData = {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({tutorSessionId: tutorSessionId}),
+    credentials: "include",
+  };
+const userData = await fetch("http://localhost:3500/user/tutorSession", requestData).then((result) => {
+    // console.log("result: ", result);
+  return result.json().then((data)=>{
+    console.log("uhh")
+        // console.log("data: ", data);
+        window.location.reload();
+        // return user;
+  })
+  
+});
+}
 
 async function displayCourses() {
   const requestData = {
@@ -54,6 +73,8 @@ async function displayCourses() {
     })
     
   });
+
+
 
   let firstName = userData.firstName;
   console.log(firstName)
@@ -72,6 +93,12 @@ async function displayCourses() {
     console.log("id: ", session);
     let courseName = await getCourseName(courseId);
 
+    const deleteButton = document.createElement('div');
+    deleteButton.innerText = "Remove Tutor Session"
+    deleteButton.classList.add('deleteTutorSessionButton');
+    deleteButton.id = tutorSessionId;
+
+    deleteButton.addEventListener('click', ()=>deleteTutorSession(tutorSessionId));
     // const tutorInfo = await getTutor(tutorId);
 
     // console.log(tutorInfo.firstName)
@@ -118,6 +145,7 @@ async function displayCourses() {
       hiddenInfoDiv.appendChild(titleEl);
       hiddenInfoDiv.appendChild(fullCourseP);
       hiddenInfoDiv.appendChild(pTimeEl2);
+      hiddenInfoDiv.appendChild(deleteButton);
 
 
       const dayEl = document.getElementById(day);

@@ -29,6 +29,7 @@
     border-radius: 1em; 
     width: 10em; 
     height: 10rem;
+    overflow-y: scroll;
 }
 
 .fullScreen {
@@ -130,6 +131,14 @@
     background-color: #CDDAD5;
     padding: 0.2em;
     border-radius: 1em; 
+}
+
+.deleteTutorSessionButton {
+    color: lightcoral;
+    cursor: pointer;
+}
+.deleteTutorSessionButton:hover {
+    color: red;
 }
 
 @media screen and (max-width: 200px)

@@ -20,6 +20,22 @@ cookies.forEach(cookie => {
 const dayMap = {M: 'Monday', T: 'Tuesday', W: 'Wednsday', R: 'Thursday', F: 'Friday', S: 'Saturday', U: 'Sunday'}
 
 
+async function addTutorSession(tutorSessionId) {
+  const updateData = {
+    signedUpTutorSessions: [tutorSessionId]
+  }
+  const requestData = {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(updateData),
+    credentials: "include",
+  };
+return await fetch("http://localhost:3500/user/tutorSession/", requestData)
+.then((stuff) => {
+  console.log(stuff)
+})
+}
+
 async function findTutorSessions(courseName, parentEl)  {
   await fetch(`http://localhost:3500/tutor/courseName/${courseName}`).then((result) => {
     // console.log("asdasddas", result.json());
@@ -30,12 +46,14 @@ async function findTutorSessions(courseName, parentEl)  {
   if (tutorSessions.length <= 0) {
     parentEl.querySelector(".tutorCon").innerHTML = `
       <div class="noTutorSessions">
-        <p>No tutor sessions avalible</p>
+        <p>No tutor sessions available</p>
+        <div onclick="window.location.href ='tutorHomepage.html';" class="becomeATutorButton">Become a Tutor</div>
       </div>`
     console.log(parentEl)
   }
   tutorSessions.forEach((element) => {
     element.time.forEach((d)=> {
+      console.log("element", element);
       const day = d.day;
       if (createdDays.indexOf(day) == -1) {
         createdDays.push(day);
@@ -49,6 +67,9 @@ async function findTutorSessions(courseName, parentEl)  {
       const endTime = d.end_time;
       const timeRange = startTime + "-" + endTime;
       const timeEl = document.createElement('p');
+      timeEl.id = element._id;
+      timeEl.addEventListener(`click`, ()=>{addTutorSession(timeEl.id)})
+      timeEl.classList.add(`timeButton`);
       timeEl.innerText = timeRange;
       parentEl.querySelector(`#${day}`).appendChild(timeEl)
       console.log("day:", day)
@@ -60,8 +81,6 @@ async function findTutorSessions(courseName, parentEl)  {
   // console.log("ts: ", tutorSessions)
 })
 }
-
-// console.log(courseDataValue);
 
 courseDataValue.forEach( async (course) => {
   const courseArray = course.split("\n\n")
@@ -92,61 +111,6 @@ courseDataValue.forEach( async (course) => {
 
   const tutorSessions = await findTutorSessions(courseName, courseConEl);
   
-  // if (courseConEl.querySelector(".tutorCon").innerHTML.length <= 0) {
-  //   courseConEl.querySelector(".tutorCon").innerHTML = `
-  //   <div class="noTutorSessions">
-  //     <p>No tutor sessions avalible</p>
-  //   </div>`
-  // }
   courseDivEl.appendChild(courseConEl)
 
 })
-
-
-
-
-
-
-// async function makeCourseHeaders() {
-//     const requestData = {
-//         method: "GET",
-//         headers: { "Content-Type": "application/json" },
-//         credentials: "include",
-//       };
-//     let user;
-//     await fetch("http://localhost:3500/user/", requestData).then((result) => {
-//         console.log("result: ", result);
-//       return result.json().then((data)=>{
-//             console.log("data: ", data);
-//             user=data;
-//       })
-//     })
-    
-//     const coursesDivEl = document.querySelector(`#coursesDiv`);
-//     user.classList.forEach((course) => {
-//         console.log("course: ", course)
-//         const courseCardEl = document.createElement(`div`);
-//         const courseArray = course.split("_");
-//         const p1El = document.createElement('p');
-//         const p2El = document.createElement('p');
-//         p1El.innerText = courseArray[0] + " " + courseArray[1];
-//         let p2ElText= "";
-//          courseArray.slice(2).forEach((element) => {
-//             p2ElText += element + " ";
-//         });
-//         p2El.innerText = p2ElText;
-//         courseCardEl.appendChild(p1El);
-//         courseCardEl.appendChild(p2El);
-
-//         courseCardEl.classList.add(`courseCard`);
-
-//         coursesDivEl.appendChild(courseCardEl);
-//     });
-
-//     const addCourseButtonEl = document.createElement(`div`);
-//     addCourseButtonEl.classList.add(`addCourseButon`);
-
-//     coursesDivEl.appendChild(addCourseButtonEl);
-    
-//   }
-//   displayCourses();
