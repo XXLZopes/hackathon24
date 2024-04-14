@@ -12,6 +12,43 @@
     margin: 25vh auto 25vh auto;
 }
 
+#modalNav {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modalNav > * {
+    width: fit-content;
+    font-size: 1.2rem;
+}
+
+#closeCoursesModal {
+    font-size: 2rem;
+}
+
+#closeCoursesModal:hover {
+    /* color: white; */
+    /* font-weight: bold; */
+    scale: 1.2;
+    transition: .05s;
+}
+
+#searchCon {
+    display: flex;
+
+}
+#searchCon p {
+    width: fit-content;
+    margin-right: 1rem;
+}
+
+#searchCon input {
+    width:fit-content
+}
+
 .navWrapper
 {
     display: flex; 
