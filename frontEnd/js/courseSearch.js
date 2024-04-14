@@ -13,11 +13,11 @@ async function displayCourses() {
   
   courses.forEach((element) => {
     let courseDiv = document.createElement("div");
-    courseDiv.classList.add("class=modalContent");
+    courseDiv.classList.add("modalContent");
     divWrapperEl.appendChild(courseDiv);
     let courseButton = document.createElement("button");
     courseDiv.appendChild(courseButton);
-    courseButton.innerHTML = element;
+    courseButton.innerHTML = element.replaceAll("_", " ").split("");
   });
   
 }
@@ -27,7 +27,7 @@ searchEl.addEventListener("keyup", (event) => {
 
   const searchQuery = value.toLowerCase();
 
-  for (const courseName of courses) {
+  for (let courseName of courses) {
     let course = courseName.textContent.toLowerCase();
 
     if (course.includes(searchQuery)) {
