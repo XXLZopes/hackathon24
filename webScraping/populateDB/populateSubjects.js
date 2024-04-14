@@ -1,4 +1,4 @@
-const Subject = require('../src/models/Subject')
+const Subject = require('../../model/Subject')
 
 const fs = require('fs');
 const jsonData = fs.readFileSync("subjects.json");
@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 const port = 3500;
 
-const uri = "mongodb+srv://root:2hrxgfMaTJA4ZWcl@cluster0.fxbbki1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const uri = "mongodb+srv://root:wvCCFbpeOsvk6sPT@cluster0.vhgzsme.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 mongoose
     .connect(

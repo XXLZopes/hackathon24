@@ -24,6 +24,15 @@ const courseController = {
             res.status(500).json(err);
         });
     },
+    getUniqueCourseNames(req, res) {
+        Course.find({})
+        .distinct("courseName")
+        .then((courses) => res.status(200).json(courses))
+        .catch((err) => {
+            console.error(`Something went wrong when getting all ths courses!`);
+            res.status(500).json(err)
+        })
+    },
     getCourseByCN(req,res) {
         const courseCN = req.params.courseCN
         Course.find({CN: courseCN})
@@ -31,6 +40,17 @@ const courseController = {
         .then((courses) => res.status(200).json(courses))
         .catch((err) => {
             console.error(`Something went wrong when trying to retrieve course with CN ${courseCN}.`);
+            res.status(500).json(err);
+        });
+    },
+    getCourseByCourseName(req,res) {
+        const courseName = req.params.courseName
+        Course.find({courseName: courseName})
+        .select("-__v")
+        .then((courses) => {
+            res.status(200).json(courses)})
+        .catch((err) => {
+            console.error(`Something went wrong when trying to retrieve course with course name: ${courseName}.`);
             res.status(500).json(err);
         });
     },
@@ -52,28 +72,17 @@ const courseController = {
             );
             return res.status(500).json(err);
         });
+    },
+    getCoursesBySubject(req,res) {
+        const subject = req.params.courseSubject
+        Course.find({subject: subject})
+        .select("-__v")
+        .then((courses) => res.status(200).json(courses))
+        .catch((err) => {
+            console.error(`Something went wrong when trying to retrieve course with CN ${courseCN}.`);
+            res.status(500).json(err);
+        });
     }
-    // updateCourseByCN(req,res) {
-    //     const courseCN = req.params.CN;
-    //     const updateData = req.body;
-    //     for (const key in updateData) {
-    //         if (!isValidField(key))
-    //         return res.status(400).json({message: `The course schema does not have the property ${key}.`});
-    //     }
-    //     Course.findOneAndUpdate({ courseCN: courseCN}, updateData, {new: true})
-    //     .then((updatedCourse) => {
-    //         if (!updatedCourse)
-    //             return res.status(404).json({message: `No course with the CN of ${courseCN} found.`});
-    //         return res.status(200).json({
-    //             message: `Course with CN: ${courseCN} successfully updated.`,
-    //             updatedCourse: updatedCourse
-    //         });
-    //     })
-    //     .catch((err) => {
-    //         console.log(`Something went wrong when attempting to update the course with the CN: ${courseCN}`);
-    //         res.status(500).json(err);
-    //     });
-    // }
 }
 
 module.exports = courseController;

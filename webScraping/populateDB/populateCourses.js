@@ -1,4 +1,4 @@
-const Course = require('../src/models/Course')
+const Course = require('../../model/Course')
 
 const fs = require('fs');
 const jsonData = fs.readFileSync("course_data.json");
@@ -10,12 +10,11 @@ const app = express();
 app.use(express.json());
 const port = 3500;
 
-const uri = "mongodb+srv://root:2hrxgfMaTJA4ZWcl@cluster0.fxbbki1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const uri = "mongodb+srv://root:wvCCFbpeOsvk6sPT@cluster0.vhgzsme.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 mongoose
     .connect(
         uri,
-        { useNewUrlParser: true, useUnifiedTopology: true }
     )
     .then(()=> {
         console.log("MongoDB has connected!");
