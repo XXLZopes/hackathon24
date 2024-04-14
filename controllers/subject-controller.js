@@ -1,8 +1,8 @@
 const Subject = require(`../model/Subject`);
 const {ObjectId} = require(`mongoose`);
 
-const courseController = {
-    getAllSibjects(req, res) {
+const subjectController = {
+    getAllSubjects(req, res) {
         Subject.find({})
         .select("-__v")
         .then((courses) => res.status(200).json(courses))
@@ -13,4 +13,4 @@ const courseController = {
     }
 }
 
-module.exports = courseController;
+module.exports = subjectController;
