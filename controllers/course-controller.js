@@ -35,6 +35,7 @@ const courseController = {
     },
     getCourseById(req,res) {
         const courseId = req.params.courseId
+        console.log("courseId: ", courseId);
         Course.findById(courseId)
         .select("-__v")
         .then((courses) => res.status(200).json(courses))

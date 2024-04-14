@@ -45,6 +45,21 @@ const userController = {
             return res.status(500).json(err);
         })
     },
+    getUserById(req, res) {
+        const userId = req.params.userId;
+        User.find({_id: userId})
+        .then((user) => {
+            // console.log("user: ", user);
+            if (!user) {
+                return res.status(404).json({message: `No user with the id ${userId} found!`});
+            }
+            return res.status(200).json(user);
+        })
+        .catch((err) => {
+            console.error(`Something went wrong when attempting to get the logged in user ${err}`);
+            return res.status(500).json(err);
+        })
+    },
     updateLoggedInUser(req,res) {
         const userID = req.session.userId;
         const updateData = req.body;

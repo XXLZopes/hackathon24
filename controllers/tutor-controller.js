@@ -28,7 +28,8 @@ const tutorController = {
 
     getTutorSessionById(req, res) {
         const tutorSessionId = req.params.tutorSessionId
-        TutorSession.findById(tutorSessionId)
+        TutorSession.find({_id: tutorSessionId})
+        .select("-__v")
         .then((tutorSession) => {
             console.log(tutorSession);
             if (!tutorSession) {

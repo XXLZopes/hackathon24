@@ -44,11 +44,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999999;
 }
 
 .fullScreen .dayCard {
     width: 50vw;
     height: 50vw;
+}
+
+.dayCard .hiddenInfo {
+    display: none;
+    text-align: center;
+    line-height: 1.5rem;
+    border-bottom: solid black 1.8px;
+}
+.dayCard .hiddenInfo .title {
+    font-weight: bold;
+    /* color: red; */
+}
+
+.fullScreen .dayCard .cardInfo {
+    display: none;
 }
 
 .fullScreen .dayCard .hiddenInfo {
