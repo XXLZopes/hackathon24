@@ -14,7 +14,8 @@
     display: flex; 
     justify-content: center; 
     flex-direction: column; 
-    width: 30%; 
+    width: 30%;
+    max-width: 200px;
     border-top-left-radius: 2em; 
     border-bottom-left-radius: 2em; 
     padding: 2em;
