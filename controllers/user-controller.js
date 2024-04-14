@@ -71,6 +71,16 @@ const userController = {
             console.log(err)
             res.status(500).json(err);
         });
+ },
+ getAllUsernames(req,res) {
+    User.find({})
+        .select("firstName")
+        .select("lastName")
+        .then((users) => res.status(200).json(users))
+        .catch((err) => {
+            console.error("Something went wrong when trying to retrieve all the users names from the database.");
+            res.status(500).json(err);
+        });
  }
 }
 
