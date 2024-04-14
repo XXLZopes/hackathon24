@@ -42,7 +42,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex: 1 1 50%
+    flex: 1 1 50%;
+    margin: 6rem 0;
 }
 
 .courseCard

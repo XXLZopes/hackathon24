@@ -1,5 +1,14 @@
 let courseInfoArray;
 
+const addedModalCon = document.querySelector('#addedModalCon');
+
+addedModalCon.addEventListener('click', ()=> {
+  console.log(addedModalCon)
+  if (addedModalCon.style.display == "flex") {
+    addedModalCon.style.display = "none";
+  }
+})
+
 if (typeof data != "undefined") {
   courseInfoArray = [...data.info];
 }
@@ -68,7 +77,12 @@ async function findTutorSessions(courseName, parentEl)  {
       const timeRange = startTime + "-" + endTime;
       const timeEl = document.createElement('p');
       timeEl.id = element._id;
-      timeEl.addEventListener(`click`, ()=>{addTutorSession(timeEl.id)})
+      timeEl.addEventListener(`click`, ()=>{
+        addTutorSession(timeEl.id)
+        timeEl.classList.add('selectedTime');
+        addedModalCon.style.display = "flex";
+
+      })
       timeEl.classList.add(`timeButton`);
       timeEl.innerText = timeRange;
       parentEl.querySelector(`#${day}`).appendChild(timeEl)

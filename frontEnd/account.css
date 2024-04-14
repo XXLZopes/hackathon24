@@ -18,6 +18,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #FFC72C;
+    border-bottom: 0.5em solid #F2A900;
 }
 
 #modalNav > * {
@@ -103,6 +107,12 @@ div#loginEmail
     margin: auto;
     margin-left: 1vh;
 }
+
+#divCoursesModal {
+    position: inherit;
+}
+
+
 
 .pageFooter
 {
