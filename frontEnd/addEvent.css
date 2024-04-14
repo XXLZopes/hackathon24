@@ -1,3 +1,10 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .addEventButton
 {
     width: 100%;
@@ -78,7 +85,24 @@
     position: fixed; 
     right: 20px; 
     bottom: 70px; 
+    
 
+}
+
+.eventModalCon
+{
+    display: none;
+    padding: 2rem;
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#closeEventModal {
+    cursor: pointer;
 }
 
 .eventModal
@@ -91,7 +115,7 @@
     border: 0.5em solid #F2A900;
     border-radius: 1em;
     background-color: #FFC72C;
-    width: 35em;
+    max-width: 80%;
     padding-bottom: 0.5em;
     padding-left: 1em;
     margin: 25vh auto 25vh auto;
@@ -118,4 +142,9 @@
 .timeInput p
 {
     bottom: -30%;
+}
+
+#submitButton
+{
+    width: 25%;
 }

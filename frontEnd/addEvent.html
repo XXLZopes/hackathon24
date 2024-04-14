@@ -101,33 +101,35 @@
   <button class="homepageButton" id="addEventButton">Add <br/>Event</button>-->
 
 </div>
-
-<div class="eventModal" id="divEventModal">
-  <p>Edit Event</p>
-  <div>
-    <label for="event">Name Event:</label>
-    <input name="event" id="courseSelection">
-  </div>
-  <div class="dayInput">
-    <label for="dotw">Select Day:</label>
-    <select name="dotw" id="daySelection">
-      <option value="monday">Monday</option>
-      <option value="tuesday">Tuesday</option>
-      <option value="wednesday">Wednesday</option>
-      <option value="thursday">Thursday</option>
-      <option value="friday">Friday</option>
-      <option value="saturday">Saturday</option>
-      <option value="sunday">Sunday</option>
-    </select>
-  </div>
-  <div class="timeInput">
-    <label for="time">Select Time Period:</label>
-    <input type="time" id="startTime"/>
-    <label for="time">until</label>
-    <input type="time" id="endTime"/>
+<div class="eventModalCon" id="eventModalCon">
+  <div class="eventModal" id="divEventModal">
+    <div class="closeButton" id="closeEventModal">x</div>
+    <p>Edit Event</p>
+    <div>
+      <label for="event">Name Event:</label>
+      <input name="event" id="courseSelection">
+    </div>
+    <div class="dayInput">
+      <label for="dotw">Select Day:</label>
+      <select name="dotw" id="daySelection">
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+        <option value="sunday">Sunday</option>
+      </select>
+    </div>
+    <div class="timeInput">
+      <label for="time">Select Time Period:</label>
+      <input type="time" id="startTime"/>
+      <label for="time">until</label>
+      <input type="time" id="endTime"/>
+    </div>
+    <button id="submitButton">Submit</button>
   </div>
 </div>
-
 <button id="floatingButton" onclick="window.location.href ='https://learning.humboldt.edu/after-hours-tutoring';">Need After Hours Tutoring?</button>
 
 
@@ -136,4 +138,7 @@
     </footer>
 
 </body>
+
+<script src="./js/addEvent.js"></script>
+
 </html>
