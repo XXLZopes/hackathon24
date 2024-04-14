@@ -43,7 +43,6 @@ for subject, link in links:
                     'CN': cn,
                     'subject': subject,
                     'courseName': className,
-                    'courseMeetingDays': days,
                     'courseTime': time
                 })
 
