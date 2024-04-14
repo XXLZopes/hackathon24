@@ -35,7 +35,7 @@ async function displayCourses() {
       Array.from(divWrapperEl.children).forEach((element) => {
         divWrapperArray.push(element);
       });
-      divWrapperArray.splice(0, 2);
+      divWrapperArray.splice(0, 4);
       startSearchListener();
     });
 }
