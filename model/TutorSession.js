@@ -2,15 +2,13 @@ const { Schema, model } = require(`mongoose`);
 const Time = require("./Time");
 
 const tutorSessionSchema = new Schema({
-    tutor_id: {
+    tutor: {
         type: Number,
-        unique: true,
         required: true
     },
 
-    course_id: {
+    course: {
         type: Number,
-        unique: true,
         required: true
     },
 

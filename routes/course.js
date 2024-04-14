@@ -8,7 +8,8 @@ const {
     deleteCourseByCN,
     getCoursesBySubject,
     getUniqueCourseNames,
-    getCourseByCourseName
+    getCourseByCourseName,
+    getCourseById
 } = require(`../controllers/course-controller`);
 
 router.route(`/`)
@@ -18,6 +19,9 @@ router.route(`/`)
 router.route(`/courseName/:courseName`)
     .get(getCourseByCourseName)
     
+router.route(`/courseId/:courseId`)
+    .get(getCourseById)
+
 router.route(`/courseName`)
     .get(getUniqueCourseNames)
 

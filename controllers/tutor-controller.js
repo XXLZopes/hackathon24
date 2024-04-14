@@ -26,6 +26,21 @@ const tutorController = {
         });
     },
 
+    getTutorSessionById(req, res) {
+        const tutorSessionId = req.params.tutorSessionId
+        TutorSession.findById(tutorSessionId)
+        .then((tutorSession) => {
+            console.log(tutorSession);
+            if (!tutorSession) {
+                return res.status(404).json({message: "No tutor with that id found."});
+            }
+            return res.status(200).json(tutorSession);
+        }).catch((err)=> {
+            console.error("Something went wrong", err);
+            return res.status(500).json(err);
+        })
+    },
+
     getTutorSessionByTutor(req,res) {
         //todo this wont work rn, if you want to test change it to params.tutorID
         const tutorID = req.session.userID;

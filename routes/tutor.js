@@ -6,13 +6,17 @@ const {
     getAllTutorSessions,
     getTutorSessionByTutor,
     deleteTutorSessionBySessionID,
-    updateTutorSessionBySessionID
+    updateTutorSessionBySessionID,
+    getTutorSessionById
 } = require(`../controllers/tutor-controller`);
 
 router.route(`/`)
    .post(createTutorSession)
    .get(getAllTutorSessions)
 
+router.route(`/tutorSessionId/:tutorSessionId`)
+    .get(getTutorSessionById)
+    
 router.route(`/tutorID/:tutorID`)
     .get(getTutorSessionByTutor)
 

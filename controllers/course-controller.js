@@ -33,6 +33,16 @@ const courseController = {
             res.status(500).json(err)
         })
     },
+    getCourseById(req,res) {
+        const courseId = req.params.courseId
+        Course.findById(courseId)
+        .select("-__v")
+        .then((courses) => res.status(200).json(courses))
+        .catch((err) => {
+            console.error(`Something went wrong when trying to retrieve course with id ${courseId}.`);
+            res.status(500).json(err);
+        });
+    },
     getCourseByCN(req,res) {
         const courseCN = req.params.courseCN
         Course.find({CN: courseCN})
