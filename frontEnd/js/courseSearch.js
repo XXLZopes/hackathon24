@@ -8,9 +8,12 @@ function displayCourses() {
     courses = result.parse();
   });
   courses.array.forEach(element => {
-    courseDiv = document.createElement("div");
+    let courseDiv = document.createElement("div");
+    courseDiv.classList.add("class=modalContent");
     courseDiv.innerHTML = element;
     divWrapperEl.appendChild(courseDiv);
+    let courseButton = document.createElement("button")
+    courseDiv.appendChild(courseButton);
   });
 }
 
