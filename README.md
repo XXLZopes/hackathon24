@@ -13,4 +13,5 @@ Software used:  Node JS
 Stock images sourced from Canva's image library.
 All other assets were created from scratch within the 24 hours.
 
-Created by: Aidan Meyer, Alex Georgopoulos, Forrest Reid, Lily Yassemi, Simon Saltikov
+Created by: Aidan Meyer, Alex Georgopoulos, Forrest Reid, Lily Yassemi, and Simon Saltikov
+Github Repo: https://github.com/XXLZopes/hackathon24.git
