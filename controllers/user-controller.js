@@ -28,8 +28,8 @@ const userController = {
         })
     },
     getLoggedInUser(req, res) {
-        // const userId = req.session.userId;
-        const userId = new mongoose.Types.ObjectId("661b02e72370916ecfba56e3");
+        const userId = req.session.userId;
+        // const userId = new mongoose.Types.ObjectId("661b02e72370916ecfba56e3");
         if (!userId) {
             return res.status(404).json({message: `Not logged in.`});
         }
