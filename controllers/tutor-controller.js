@@ -6,7 +6,7 @@ const tutorController = {
         TutorSession.create(body)
         .then((newTutorSession) => {
             return res.status(200).json({
-                message: `Created Tutor Session with tutor-id: ${body.tutor_id} and course-id ${body.course_id} 
+                message: `Created Tutor Session with tutor-id: ${body.tutorId} and course-id ${body.courseId} 
                 has been created and added to the database.`,
                 TutorSession: newTutorSession
             });
@@ -45,11 +45,20 @@ const tutorController = {
         });
     },
     
-
+    getTutorSessionByCourseName(req,res) {
+        const courseName = req.params.courseName;
+        TutorSession.find({courseName: courseName})
+        .select("-__v")
+        .then((tutorSessions) => res.status(200).json(tutorSessions))
+        .catch((err) => {
+            console.error(`Something went wrong when trying to retrieve tutor sessions with ID ${tutorID}: ${err}`);
+            res.status(500).json(err);
+        });
+    },
     getTutorSessionByTutor(req,res) {
         //todo this wont work rn, if you want to test change it to params.tutorID
         const tutorID = req.session.userID;
-        TutorSession.find({tutor_id: tutorID})
+        TutorSession.find({tutorID: tutorID})
         .select("-__v")
         .then((tutorSessions) => res.status(200).json(tutorSessions))
         .catch((err) => {
