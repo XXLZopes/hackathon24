@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-.cardInfo p {
-    
-}
-
 .cardInfo {
     width: 100%;
     text-align: center;
@@ -107,9 +103,9 @@
 .homepageButton
 {
     background-color: #00856A; 
+    border: 0.5em solid #004C46; 
     color: #F5F3E7;
     font-size: 100%; 
-    border: none; 
     border-radius: 2em; 
     width: 25%; 
     padding: 0.6em;
