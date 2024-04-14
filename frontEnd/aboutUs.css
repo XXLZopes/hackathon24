@@ -1,17 +1,44 @@
+body
+{
+    overflow-y: scroll; 
+}
+
 .imagesRow
 {
     display: flex; 
     flex-direction: row; 
+    
+    margin-bottom: 2em; 
 }
 
 .person
 {
     display: flex; 
     flex-direction: column; 
+    justify-content: center;
 }
 
 img
 {
-    width: 25px;
-    height: 25px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+}
+
+h1
+{
+    text-align: center; 
+}
+
+h2
+{
+    text-align: center; 
+}
+
+@media screen and (max-width: 600px)
+{
+    .imagesRow
+    {
+        flex-direction: column; 
+    }
 }

@@ -43,7 +43,7 @@ div#loginEmail
     margin-top: 1vh;
 }
 
-#loginFooter
+#loginFooter, #loginBack
 {
     margin: auto;
     padding-top: 1vh;

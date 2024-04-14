@@ -70,6 +70,7 @@ body
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    max-height: 100%; 
     /* margin-top: 5em; 
     width: 50%; 
     margin-left: auto; 
