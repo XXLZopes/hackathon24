@@ -4,11 +4,13 @@ let courses;
 
 async function displayCourses() {
   // This needs to be an array from the list of all courses
-  fetch("http://localhost:3500/course/courseName").then((result) => {
-    console.log(result);
-    courses = result.parse();
-    
-  });
+  await fetch("http://localhost:3500/course/courseName").then((result) => {
+    return result.json().then((data)=>{
+        data.splice(0,1);
+        courses=data;
+    })
+  })
+  
   courses.forEach((element) => {
     let courseDiv = document.createElement("div");
     courseDiv.classList.add("class=modalContent");
@@ -17,6 +19,7 @@ async function displayCourses() {
     courseDiv.appendChild(courseButton);
     courseButton.innerHTML = element;
   });
+  
 }
 
 searchEl.addEventListener("keyup", (event) => {
