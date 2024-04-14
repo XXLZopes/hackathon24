@@ -10,8 +10,9 @@
     width: 10em;
     margin-left: auto; 
     margin-right: auto; 
-    background-color: #FFC72C;
-    border: none; 
+    background-color: #00856A;
+    border: 0.2em solid #004C46; 
+    color: #F5F3E7; 
     border-radius: 1em;
     font-size: 200%;
 
