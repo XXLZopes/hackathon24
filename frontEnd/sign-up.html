@@ -40,14 +40,20 @@
             <label for="courses">Courses:</label>
             <input type="text" name="courses" id="coursesInput" required="required" />
         </div>
-        <button id="submitButton" onclick="displaySubmit()">Submit</button>
+        <button id="submitButton" onclick="displaySubmit()">Create Account</button>
         <p id="signUpFooter">Have an account? <a href="">Log in</a> instead!</p>
     </div>
 
     <div class="coursesModal" id="divCoursesModal">
-
+        <p>Select Your Course(s)</p>
+        <input type="text" placeholder="Search"/>
+        <!-- For each course, make a modalContent div -->
+        <div class="modalContent">
+            <button>Course Name</button>
+        </div>
     </div>
 </body>
+
 <footer class="pageFooter">
     <p>© 2024 StudyHub Team Hackathon Project</p>
 </footer>
