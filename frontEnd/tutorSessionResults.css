@@ -1,0 +1,12 @@
+.courseCon {
+    width: 100%;
+}
+
+.courseTitle {
+    width: 70%;
+    padding: .7rem 1.5rem;
+    border-radius: 4rem;
+    color: white;
+    background-color: #004C46;
+    margin: 1rem;
+}

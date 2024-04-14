@@ -36,10 +36,13 @@ courseDataValue.forEach((course) => {
   courseTitleEl.classList.add('courseTitle');
   tutorConEl.classList.add('tutorCon');
 
-  courseTitleEl.innerHTML = `<p>${courseTitle}</p>`
+  courseTitleEl.innerHTML = `<h2>${courseTitle}</h2>`
+
+  courseConEl.appendChild(courseTitleEl);
+  courseConEl.appendChild(tutorConEl);
 
 
-  courseDivEl.appendChild(courseTitleEl)
+  courseDivEl.appendChild(courseConEl)
 
 })
 
