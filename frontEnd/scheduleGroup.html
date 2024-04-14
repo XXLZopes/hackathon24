@@ -35,9 +35,11 @@
 </nav>
 
     
-    <h2 id="namesQuestion">Who is in your group?</h1>
+  <div class="questionsRow">
     
-    <div class="nameInfo">
+    <div class="namesDiv">
+        <h2 id="namesQuestion">Who is in your group?</h2>
+      <div class="nameInfo">
         <label for="groupName">Please enter a username:</label>
         <input list="groupName" name="groupName" id="nameInput" placeholder="Ex. fcr15"/>
         <datalist id="groupName"></datalist>
@@ -46,11 +48,15 @@
         <ul id="groupMemberNameList"></ul>
         <button id="addName" onclick="addToGroup()">Add To Group</button>
         <button id="clearAll" onclick="clearAll()">Clear All</button>
+      </div>
     </div>
+ 
 
-    <h2 id="timeQuestion">How long is your meeting?</h1>
-    <div class="timeInfo">
-     
+
+    
+    <div class="timesDiv">
+        <h2 id="timeQuestion">How long is your meeting?</h2>
+        <div class="timeInfo">
         <input type="radio" name="meetingLength" id="15" />
         <label for="15">15 minutes</label>
         
@@ -66,6 +72,8 @@
         <input type="radio" name="meetingLength" id="2" />
         <label for="2">2 hours</label>
     </div>
+  </div>
+</div>
 
 
     <div id="findTimeButtonDiv"><button id="findTimeButton" onclick="window.location.href='groupSessionResults.html';">Find Available Times</button></div>

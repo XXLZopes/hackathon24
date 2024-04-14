@@ -1,19 +1,29 @@
-
-
-.nameInfo, .timeInfo
+.namesDiv, .timesDiv
 {
     background-color: #FFC72C;
-    width: 50%; 
+    width: 50%;
     margin-left: auto; 
     margin-right: auto; 
     padding: 2em; 
     border-radius: 1em; 
+    border: 1.3em solid #F2A900;
     
 }
 
 input[type="text"]
 {
     max-width: 100%; 
+}
+
+.questionsRow
+{
+    display: flex;
+    flex-direction: row; 
+    margin-top: 2em;
+    width: 75%;
+    margin-left: auto; 
+    margin-right: auto; 
+    gap: 3em; 
 }
 
 #namesQuestion
@@ -63,6 +73,7 @@ input[type="text"]
     border-radius: 2em; 
     width: 25%; 
     padding: 0.6em;
+    margin-bottom: 8em; 
 }
 
 .timeInfo
@@ -72,6 +83,8 @@ input[type="text"]
     grid-auto-rows: minmax(1em, auto); 
     gap: 0.5em;
 }
+
+
 
 #addName
 {

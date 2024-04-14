@@ -1,10 +1,12 @@
 .addSessionButton
 {
-    width: 100%;
+    width: 10em;
+    margin-left: auto; 
+    margin-right: auto; 
     background-color: #FFC72C;
     border: none; 
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
+    border-radius: 1em;
+    font-size: 200%;
 }
 
 .dayCardRow
@@ -22,6 +24,7 @@
 {
     background-color: #F5F3E7; 
     border-radius: 1em; 
+    min-height: 10rem; 
     width: 10em; 
 }
 
