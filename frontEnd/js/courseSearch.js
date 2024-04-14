@@ -1,7 +1,18 @@
 const searchEl = document.getElementById("searchInput");
+const divWrapperEl = document.getElementById("divCoursesModal")
+let courses;
 
-// This needs to be an array from the list of all courses
-const courses = document.getElementsByClassName("modalContent");
+function displayCourses() {
+  // This needs to be an array from the list of all courses
+  fetch("http://localhost:3500/course/courseName").then((result) => {
+    courses = result.parse();
+  });
+  courses.array.forEach(element => {
+    courseDiv = document.createElement("div");
+    courseDiv.innerHTML = element;
+    divWrapperEl.appendChild(courseDiv);
+  });
+}
 
 searchEl.addEventListener("keyup", (event) => {
   const { value } = event.target;
