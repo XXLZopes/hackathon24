@@ -32,7 +32,7 @@ async function addTutorSession(tutorSessionId) {
   };
 return await fetch("http://localhost:3500/user/tutorSession/", requestData)
 .then((stuff) => {
-  console.log(stuff)
+  //console.log(stuff)
 })
 }
 
@@ -49,11 +49,11 @@ async function findTutorSessions(courseName, parentEl)  {
         <p>No tutor sessions available</p>
         <div onclick="window.location.href ='tutorHomepage.html';" class="becomeATutorButton">Become a Tutor</div>
       </div>`
-    console.log(parentEl)
+    //console.log(parentEl)
   }
   tutorSessions.forEach((element) => {
     element.time.forEach((d)=> {
-      console.log("element", element);
+      //console.log("element", element);
       const day = d.day;
       if (createdDays.indexOf(day) == -1) {
         createdDays.push(day);
@@ -72,9 +72,9 @@ async function findTutorSessions(courseName, parentEl)  {
       timeEl.classList.add(`timeButton`);
       timeEl.innerText = timeRange;
       parentEl.querySelector(`#${day}`).appendChild(timeEl)
-      console.log("day:", day)
+      //console.log("day:", day)
     })
-    console.log("adddds", element);
+    //console.log("adddds", element);
 
 
   })
@@ -133,7 +133,7 @@ async function displayCourses() {
 
   let firstName = user.firstName;
 
-  console.log(firstName);
+  //console.log(firstName);
 
   const welcomeUserNameEl = document.querySelector('#welcomeUserName');
   welcomeUserNameEl.innerText = firstName; 

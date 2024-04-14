@@ -1,14 +1,10 @@
-
-    
-console.log('help')
-
 async function getTutorSession(tutorSessionId) {
   const requestData = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
   };
-  console.log("tID: ", tutorSessionId)
+  //console.log("tID: ", tutorSessionId)
   return await fetch("http://localhost:3500/tutor/tutorSessionId/" + tutorSessionId, requestData)
   .then((result) => {
     return result.json();
@@ -50,7 +46,7 @@ async function deleteTutorSession(tutorSessionId) {
 const userData = await fetch("http://localhost:3500/user/tutorSession", requestData).then((result) => {
     // console.log("result: ", result);
   return result.json().then((data)=>{
-    console.log("uhh")
+    //console.log("uhh")
         // console.log("data: ", data);
         window.location.reload();
         // return user;
@@ -68,7 +64,7 @@ async function displayCourses() {
   const userData = await fetch("http://localhost:3500/user/", requestData).then((result) => {
       // console.log("result: ", result);
     return result.json().then((user)=>{
-          console.log("data: ", user);
+          //console.log("data: ", user);
           return user;
     })
     
@@ -77,7 +73,7 @@ async function displayCourses() {
 
 
   let firstName = userData.firstName;
-  console.log(firstName)
+  //console.log(firstName)
 
   const welcomeNameEl = document.querySelector('#welcomeUserName'); 
   welcomeNameEl.innerText = firstName; 
@@ -86,7 +82,7 @@ async function displayCourses() {
   // console.log(userData.signedUpTutorSessions);
 
   tutorSessions.forEach(async tutorSessionId => {
-    console.log(tutorSessionId);
+    //console.log(tutorSessionId);
     const session = await getTutorSession(tutorSessionId);
     const courseId = session.courseId;
     const tutorId = session.tutorId
@@ -106,10 +102,12 @@ async function displayCourses() {
 
     // console.log(session);
     // const tutorInfo = getTutor()
-    courseName = courseName.courseName.replaceAll('__', '_');
+    courseName = session.courseName.replaceAll('__', '_');
     const courseArray = courseName.split("_");
     courseName = courseArray[0] + " " + courseArray[1];
     const fullCourseName = courseArray.join(" ");
+
+    console.log(courseArray)
 
     // console.log("cn: ", courseName);
     // console.log(tutorSessionId)
@@ -156,7 +154,7 @@ async function displayCourses() {
       
 
     })
-    console.log("session",session.time)
+    //console.log("session",session.time)
   })
 }
 displayCourses();
