@@ -35,7 +35,7 @@ async function displayCourses() {
       Array.from(divWrapperEl.children).forEach((element) => {
         divWrapperArray.push(element);
       });
-      divWrapperArray.splice(0, 2);
+      divWrapperArray.splice(0, 4);
       startSearchListener();
     });
 }
@@ -45,6 +45,7 @@ function startSearchListener() {
     const { value } = event.target;
 
     const searchQuery = value.toLowerCase();
+    console.log(divWrapperArray)
 
     divWrapperArray.forEach((element) => {
       if (
