@@ -1,4 +1,4 @@
-// wvCCFbpeOsvk6sPT
+require('dotenv').config();
 const mongoose = require(`mongoose`);
 const express = require(`express`);
 const session = require(`express-session`);
@@ -6,9 +6,12 @@ const cors = require(`cors`);
 
 const app = express();
 
+const user = process.env.DB_USER
+const password = process.env.DB_PASS
+
 
 const port = 3500;
-const uri = `mongodb+srv://root:wvCCFbpeOsvk6sPT@cluster0.vhgzsme.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://${user}:${password}@cluster0.vhgzsme.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 const corsData = {
     origin: `http://127.0.0.1:5500`,
