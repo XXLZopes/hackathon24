@@ -93,7 +93,10 @@ async function verifyEmail() {
       })
       .then((data) => {
         console.log("data.verified: ", data);
-        window.location.href = "./account.html";
+        if (!data.firstName)
+          window.location.href = "./account.html";
+        else
+          window.location.href = "./studentHomepage.html";
         return data.verified;
       })
       .catch((error) => {

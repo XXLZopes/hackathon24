@@ -60,3 +60,23 @@
     flex-direction: column;
     align-items: center; 
 }
+
+.courseCard:hover, #addCourseButton:hover {
+    scale: 1.1;
+}
+
+#addCourseButton {
+    cursor: pointer;
+    border: 0.5em solid #d0d0d0;
+    background-color: #838383;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 10rem;
+    max-height: 8rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center; 
+}

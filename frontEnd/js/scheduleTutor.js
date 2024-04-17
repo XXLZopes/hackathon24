@@ -41,6 +41,16 @@ async function displayCourses() {
     });
 
     const addCourseButtonEl = document.createElement(`div`);
+    const addCourseText = document.createElement('p');
+    addCourseButtonEl.id = `addCourseButton`
+    addCourseText.innerText = `Add a Course`;
+    addCourseText.id = `addCourseButtonText`;
+    addCourseButtonEl.appendChild(addCourseText);
+    addCourseButtonEl.addEventListener('click', ()=> {
+      window.location.replace('account.html?openCourses=true');
+    })
+    coursesDivEl.appendChild(addCourseButtonEl);
+    
     
   }
   displayCourses();

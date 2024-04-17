@@ -8,11 +8,9 @@ const UserSchema = new Schema({
     },
     firstName: {
         type: String,
-        default: `User`
     },
     lastName: { 
         type: String,
-        default: `Name`
     },
     classList: {
         type: [String],

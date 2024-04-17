@@ -7,6 +7,19 @@ let courses;
 let course;
 let divWrapperArray = [];
 
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams)
+  if (urlParams.get('openCourses') === 'true') {
+    const coursesInput = document.getElementById('coursesInput');
+    if (coursesInput) {
+      coursesInput.focus();
+    } else {
+      console.error('Element #coursesInput not found.');
+    }
+  }
+});
+
 
 
 async function displayCourses() {

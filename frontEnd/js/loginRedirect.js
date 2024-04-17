@@ -33,7 +33,7 @@ async function updateUser() {
     })
     .then(response => {
 
-        console.log(response);
+        console.log("response: ", response);
 
         if (!response.ok) {
             throw new Error(`HTTP error ${response.status}`);
