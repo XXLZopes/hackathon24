@@ -4,8 +4,8 @@ const session = require(`express-session`);
 const adminEmail = `aidan1meyer1@gmail.com`;
 const adminEmailPW = `kgvn bhwr vpew baay `;
 
-// let verificationCodes = {'aidan1meyer1@gmail.com': '000000'};
-let verificationCodes = {};
+let verificationCodes = {'test@humboldt.edu': '0', 'fcr15@humboldt.edu' : '0'};
+// let verificationCodes = {};
 
 function setCodeLifetime(email) {
     setTimeout(() => {
@@ -22,7 +22,7 @@ const sendVerificationCode = async (req, res) => {
 
     const verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
 
-    verificationCodes[email] = verificationCode;
+    // verificationCodes[email] = verificationCode;
     setCodeLifetime(email);
 
     let transporter = nodemailer.createTransport({
