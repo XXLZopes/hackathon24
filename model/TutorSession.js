@@ -11,7 +11,8 @@ const tutorSessionSchema = new Schema({
         required: true
     },
     courseName: {
-        type: String
+        type: String,
+        required: true
     },
     time: {
         type: [Time],
