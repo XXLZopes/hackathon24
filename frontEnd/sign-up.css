@@ -1,8 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 div.signUp
 {
+    flex-wrap: wrap;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    /* flex-wrap: nowrap;
+    flex-direction: column; */
     justify-content: center;
     border: 0.5em solid #F2A900;
     border-radius: 1em;
@@ -10,8 +15,39 @@ div.signUp
     width: 35em;
     padding-bottom: 0.5em;
     margin: 25vh auto 25vh auto;
+}
+
+label {
+    text-align: end;
+    padding: .5rem
+}
+
+#account-info-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
 }
+
+#account-info-title-con {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 0;
+}
+
+#account-info-input-con {
+    display: flex;
+    /* width: 50%; */
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+#account-info-input-con input {
+    margin: .5rem;
+    margin-left: 0;
+}
+
 
 .navWrapper
 {
@@ -31,13 +67,15 @@ div.signUp
 
 div.signUp div
 {
-    margin: auto;
-    margin-bottom: 1vh;
+    margin: 1rem;
+    /* margin: auto; */
+    /* margin-bottom: 1vh; */
 }
 
 #submitButton
 {
     margin: auto;
+    width: 25%;
 }
 
 #signUpFooter
